@@ -132,10 +132,10 @@
   The Side Bar
 -->
 
-<div id="sidebar" class="d-flex flex-column align-items-end">
+<div id="sidebar" class="d-flex flex-column align-items-end" lang="">
   <div class="profile-wrapper text-center">
     <div id="avatar">
-      <a href="/" class="mx-auto">
+      <a href="/" alt="avatar" class="mx-auto">
         
           
           <img src="//assets/img/title.jpg" alt="avatar" onerror="this.style.display='none'">
@@ -143,10 +143,11 @@
       </a>
     </div>
 
-    <div class="site-title">
+    <div class="site-title mt-3">
       <a href="/">WoogyPlace</a>
     </div>
-    <div class="site-subtitle font-italic">SW/AI 생존기</div>
+    <!-- div class="site-subtitle font-italic">SW/AI 생존기</div -->
+    <div class="site-subtitle" style="letter-spacing: -0.02em;">SW/AI 생존기</div>
 
   </div><!-- .profile-wrapper -->
 
@@ -156,7 +157,7 @@
     <li class="nav-item active">
       <a href="/" class="nav-link">
         <i class="fa-fw fas fa-home ml-xl-3 mr-xl-3 unloaded"></i>
-        <span>HOME</span>
+        <span></span>
       </a>
     </li>
     <!-- the real tabs -->
@@ -209,15 +210,7 @@
 
       
       <a href="https://github.com/dongwxxkchoi" aria-label="github"
-        
-        
-          
-          target="_blank"
-        
-
-        
-
-        rel="noopener">
+        target="_blank" rel="noopener">
         <i class="fab fa-github"></i>
       </a>
       
@@ -227,15 +220,7 @@
 
       
       <a href="https://twitter.com/twitter_username" aria-label="twitter"
-        
-        
-          
-          target="_blank"
-        
-
-        
-
-        rel="noopener">
+        target="_blank" rel="noopener">
         <i class="fab fa-twitter"></i>
       </a>
       
@@ -246,11 +231,6 @@
       
       <a href="
           javascript:location.href = 'mailto:' + ['dwchoi0610','gmail.com'].join('@')" aria-label="email"
-        
-        
-
-        
-
         >
         <i class="fas fa-envelope"></i>
       </a>
@@ -261,11 +241,6 @@
 
       
       <a href="/feed.xml" aria-label="rss"
-        
-        
-
-        
-
         >
         <i class="fas fa-rss"></i>
       </a>
@@ -276,7 +251,6 @@
   </div> <!-- .sidebar-bottom -->
 
 </div><!-- #sidebar -->
-
 
     <!--
   The Top Bar
