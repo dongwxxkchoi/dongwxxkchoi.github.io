@@ -24,7 +24,7 @@ title: WoogyPlace                     # the main title
 tagline: SW/AI 생존기                  # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
-  A minimal, responsive, and powerful Jekyll theme for presenting professional writing.
+  소프트웨어학부 3학년 재학중입니다. AI 개발자가 되는 것이 목표입니다.
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 url: 'http://dongwxxkchoi.github.io'
@@ -71,14 +71,14 @@ google_analytics:
 #     light  - Use the light color scheme
 #     dark   - Use the dark color scheme
 #
-theme_mode: light
+theme_mode:
 
 # The CDN endpoint for images.
 # Notice that once it is assigned, the CDN url
 # will be added to all image (site avatar & posts' images) paths starting with '/'
 #
 # e.g. 'https://cdn.com'
-img_cdn: '/'
+img_cdn: ''
 
 # the avatar on sidebar, support local or CORS resources
 avatar: '/assets/img/title.jpg'
