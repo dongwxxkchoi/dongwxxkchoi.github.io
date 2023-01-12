@@ -789,6 +789,7 @@ $sidebar-display: "sidebar-display";
     letter-spacing: 1px;
     display: table-cell;
     vertical-align: middle;
+    color: rgba(254, 254, 254, 99%);
   }
 
   .nav-item {
@@ -798,7 +799,7 @@ $sidebar-display: "sidebar-display";
 
     &.active {
       .nav-link {
-        color: rgba(254, 254, 254, 99%);
+        color: var(--sidebar-active-color);
       }
     }
 
