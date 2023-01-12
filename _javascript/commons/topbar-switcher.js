@@ -11,7 +11,7 @@ $(function () {
 
     function hasScrolled() {
         let st = $(this).scrollTop();
-
+ 
         /* Make sure they scroll more than delta */
         if (Math.abs(lastScrollTop - st) <= delta) {
             return;
