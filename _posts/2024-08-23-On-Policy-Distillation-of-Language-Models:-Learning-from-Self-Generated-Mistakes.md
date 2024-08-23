@@ -189,9 +189,7 @@ divergence $\mathcal{D}$로 $p_T$와 $p_S$의 token-level distributions 사이�
 fixed-dataset이 있고 teacher의 feedback이 없다고 할 때, 가장 간단한 방식은 student policy에서 negative log-likelihood를 최소화하는 것이다.
 
 
-$$
-L_{SFT}(\theta)=\mathbb{E}_{(x,y)\sim(X,Y)}[-log{~p_S^\theta}(y|x)]
-$$
+![5](/assets/img/2024-08-23-On-Policy-Distillation-of-Language-Models:-Learning-from-Self-Generated-Mistakes.md/5.png)
 
 
 **Sequence-Level KD**
@@ -206,9 +204,7 @@ SeqKD(Kim & Rush, 2016)은 teacher에 의해 생성된 high probability sequence
 Student가 teacher의 token-level probability distributions을 모방하는 방법으로 이뤄진다. $p_S$는 supervised objective $L_{SD}$로 훈련된다.
 
 
-$$
-L_{SD}(\theta):=\mathbb{E}_{(x,y)\sim(X,Y)}[\mathcal{D}_{KL}(p_T||p_S^\theta)(y|x)]
-$$
+![6](/assets/img/2024-08-23-On-Policy-Distillation-of-Language-Models:-Learning-from-Self-Generated-Mistakes.md/6.png)
 
 
 
@@ -221,9 +217,7 @@ Imitation Learning(IL) 중 on-policy imitation approaches(DAgger)을 통해 **st
 **Student의** **self-generated output sequences에 대한 erroneous tokens**에 대해 **teacher의 logit으로 부터 token-specific feedback을 받는 이 방법**을 **on-policy KD** 라고 한다. student는 $y_{<n}$ **상태에서, teacher의 token-level distributions인**  $p_T(y_n\|x)$**을 모방**한다. on-policy loss인 $\mathcal{L}_{OD}$는 아래와 같이 정의된다.
 
 
-$$
-L_{OD}(\theta):=\mathbb{E}_{x\sim X}[\mathbb{E}_{y\sim p_S(\cdot\|x)}[\mathcal{D}_{KL}(p_T\|\|p_S^\theta)(y|x)]]
-$$
+![7](/assets/img/2024-08-23-On-Policy-Distillation-of-Language-Models:-Learning-from-Self-Generated-Mistakes.md/7.png)
 
 
 해당 방법 수행 시, teacher의 feedback을 받기 때문에, student’s sampling distribution인 $p_S(\cdot\|x)$에서의 backpropagation이 일어나지 않는다. 이는 training을 안정적으로 만들고, computationally efficient하다. training은 temperature $\gamma=1$로 다양한 sequence를 generate하도록 한다. 또한, student를 이용해 sequence를 generate하는 것은 teacher를 이용하는 것에 비해 cost도 적게 든다.
@@ -232,15 +226,13 @@ $$
 on-policy KD에 더해 supervised approach와 on-policy approach를 통합했고, 이를 Generalized KD (GKD)라고 한다. 따라서, GKD는 output-sequence로 fixed dataset과 on-policy student-generated sequences를 둘 다 사용한다. 따라서, GKD는 다음 objective를 최소화한다.
 
 
-$$
-L_{GKD}(\theta):=(1-\lambda)\mathbb{E}_{(x,y)\sim(X,Y)}[\mathcal{D}(p_T\|\|p_S^\theta)(y\|x)]+\lambda\mathbb{E}_{x\sim X}[\mathbb{E}_{y\sim p_S(\cdot\|x)}[\mathcal{D}(p_T\|\|p_S^\theta)(y\|x)]]
-$$
+![8](/assets/img/2024-08-23-On-Policy-Distillation-of-Language-Models:-Learning-from-Self-Generated-Mistakes.md/8.png)
 
 
 $\mathcal{D}(p_T,p_S)(y\|x)$은 teacher-student distributions간의 divergence이고, $\lambda\in[0,1]$은 student data fraction을 조절하는 hyper-parameter이다. $\lambda$ 값에 따른 GKD의 결과는 앞으로 확인해 볼 것이다.
 
 
-![5](/assets/img/2024-08-23-On-Policy-Distillation-of-Language-Models:-Learning-from-Self-Generated-Mistakes.md/5.png)
+![9](/assets/img/2024-08-23-On-Policy-Distillation-of-Language-Models:-Learning-from-Self-Generated-Mistakes.md/9.png)
 
 
 **Remark**
@@ -256,13 +248,13 @@ $\mathcal{D}(p_T,p_S)(y\|x)$은 teacher-student distributions간의 divergence�
 distillation은 주요 objective를 직접적으로 최적화하는 것이 아닌, 대리적인 방법으로 이용될 수 있으며, 미분불가능한 경우도 있다. 우리는 이 objective를 RL을 통해 optimize할 수 있다. 특히, on-policy KD의 경우는 student의 output만을 요구하므로, RLHF 등과 쉽게 결합될 수 있다. student policy에 대한 reward $r$을 teacher policy에 가깝도록 유지하게 optimize 하면 된다. 
 
 
-![6](/assets/img/2024-08-23-On-Policy-Distillation-of-Language-Models:-Learning-from-Self-Generated-Mistakes.md/6.png)
+![10](/assets/img/2024-08-23-On-Policy-Distillation-of-Language-Models:-Learning-from-Self-Generated-Mistakes.md/10.png)
 
 
 $\alpha\in[0,1]$을 통해 RL objective에 대한 distillation 강도를 조절할 수 있다. 이를 통해, human preference에 model alignment하는 alignment tax를 줄일 수 있다. 실험을 통해 RLAIF와의 통합으로 hallucination을 줄일 수 있었고, 동시에 distillation을 통한 downstream performance를 증대할 수 있었다.
 
 
-![7](/assets/img/2024-08-23-On-Policy-Distillation-of-Language-Models:-Learning-from-Self-Generated-Mistakes.md/7.png)
+![11](/assets/img/2024-08-23-On-Policy-Distillation-of-Language-Models:-Learning-from-Self-Generated-Mistakes.md/11.png)
 
 
 **Remark**
@@ -290,7 +282,7 @@ Dataset: Xsum dataset
 Metric: ROUGE-2, ROUGE-L, ROUGE-1
 
 
-![8](/assets/img/2024-08-23-On-Policy-Distillation-of-Language-Models:-Learning-from-Self-Generated-Mistakes.md/8.png)
+![12](/assets/img/2024-08-23-On-Policy-Distillation-of-Language-Models:-Learning-from-Self-Generated-Mistakes.md/12.png)
 
 
 GKD가 기존 baseline 보다 성능 증대했으며, 적은 학습 데이터셋에서도 좋은 성능을 보였고, 데이터 증가에 따른 성능의 향상도 좋았음.
@@ -300,7 +292,7 @@ Dataset: Xsum dataset
 Metric: Self-BLEU
 
 
-![9](/assets/img/2024-08-23-On-Policy-Distillation-of-Language-Models:-Learning-from-Self-Generated-Mistakes.md/9.png)
+![13](/assets/img/2024-08-23-On-Policy-Distillation-of-Language-Models:-Learning-from-Self-Generated-Mistakes.md/13.png)
 
 
 JSD(0.9), ReverseKL의 경우는 특히, Self-BLEU가 다른 divergence에 비해 높아, diversity가 감소하는 것을 알 수 있음.
@@ -310,7 +302,7 @@ Dataset: Xsum dataset
 Metric: ROUGE-2, Entailment
 
 
-![10](/assets/img/2024-08-23-On-Policy-Distillation-of-Language-Models:-Learning-from-Self-Generated-Mistakes.md/10.png)
+![14](/assets/img/2024-08-23-On-Policy-Distillation-of-Language-Models:-Learning-from-Self-Generated-Mistakes.md/14.png)
 
 
 GKD + RLHF 에서 α가 커질수록, **요약의 품질(ROUGE-2)은 올라가나**, **사실적 일관성(Entailment)은 감소**
@@ -324,10 +316,10 @@ Metric: BLEU
 Method: Beam search를 통해 얻은 3개의 결과를 평균냄
 
 
-![11](/assets/img/2024-08-23-On-Policy-Distillation-of-Language-Models:-Learning-from-Self-Generated-Mistakes.md/11.png)
+![15](/assets/img/2024-08-23-On-Policy-Distillation-of-Language-Models:-Learning-from-Self-Generated-Mistakes.md/15.png)
 
 
-![12](/assets/img/2024-08-23-On-Policy-Distillation-of-Language-Models:-Learning-from-Self-Generated-Mistakes.md/12.png)
+![16](/assets/img/2024-08-23-On-Policy-Distillation-of-Language-Models:-Learning-from-Self-Generated-Mistakes.md/16.png)
 
 
 GKD (On-policy) 방법의 성능이 제일 좋았다.
@@ -337,7 +329,7 @@ Dataset: WMT14 en-de dataset
 Metric: BLEU
 
 
-![13](/assets/img/2024-08-23-On-Policy-Distillation-of-Language-Models:-Learning-from-Self-Generated-Mistakes.md/13.png)
+![17](/assets/img/2024-08-23-On-Policy-Distillation-of-Language-Models:-Learning-from-Self-Generated-Mistakes.md/17.png)
 
 
 Machine translation의 경우는 Forward KL, Reverse KL에 비해 **JSD의 경우가 성능 향상 폭이 컸음**
@@ -352,7 +344,7 @@ Setup: Wei et al. (2022)에서의 CoT 예제 4개 추가해, few-shot prompting�
 Teacher: Flan T5-XL   Student: Flan T5-Base, Small
 
 
-![14](/assets/img/2024-08-23-On-Policy-Distillation-of-Language-Models:-Learning-from-Self-Generated-Mistakes.md/14.png)
+![18](/assets/img/2024-08-23-On-Policy-Distillation-of-Language-Models:-Learning-from-Self-Generated-Mistakes.md/18.png)
 
 
 Arithmetic Reasoning의 경우는 **Forward KL, Reverse KL이** JSD에 비해 **성능이 좋았음**
@@ -368,7 +360,7 @@ Student: FLAN T5-Base
 Train: Instruction – Answer pair을 이용해 학습 수행
 
 
-![15](/assets/img/2024-08-23-On-Policy-Distillation-of-Language-Models:-Learning-from-Self-Generated-Mistakes.md/15.png)
+![19](/assets/img/2024-08-23-On-Policy-Distillation-of-Language-Models:-Learning-from-Self-Generated-Mistakes.md/19.png)
 
 
 |            | **MMLU** | **BBH** |
