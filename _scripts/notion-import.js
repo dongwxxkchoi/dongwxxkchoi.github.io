@@ -39,8 +39,7 @@ function replaceTitleOutsideRawBlocks(body) {
 }
 
 function convertMathBlocks(md) {
-  // 수식 블록을 올바르게 변환
-  return md.replace(/\[\[(.*?)\]\]/gs, function (match, mathContent) {
+  return md.replace(/\\\[(.*?)\\\]/gs, function (match, mathContent) {
     return `$$${mathContent}$$`;
   });
 }
