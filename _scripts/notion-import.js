@@ -141,20 +141,10 @@ use_math: true${fmtags}${fmcats}
     if (md === "") {
       continue;
     }
-
-    console.log("Converted Markdown Content:");
-    console.log(md);
+    
     md = convertMathBlocks(md);
-    console.log("Converted Markdown Content After:");
-    console.log(md);
-    
     md = escapeCodeBlock(md);
-    console.log("Converted Markdown Content After 2:");
-    console.log(md);
-    
     md = replaceTitleOutsideRawBlocks(md);
-    console.log("Converted Markdown Content After 3:");
-    console.log(md);
 
     const ftitle = `${date}-${title.replaceAll(" ", "-")}.md`;
 
