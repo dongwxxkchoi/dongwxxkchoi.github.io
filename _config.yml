@@ -217,6 +217,10 @@ kramdown:
   toc_levels: 1..6
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
+  math_engine: mathjax
+  math_engine_opts:
+    # Use `$$...$$` and `$begin:math:text$...$end:math:text$` as the LaTeX delimiters
+    double_backslash_mathjax: false
 
 
 # Sass/SCSS
