@@ -126,7 +126,8 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
     const fm = `---
 layout: post
 date: ${date}
-title: "${title}"${fmtags}${fmcats}
+title: "${title}"
+use_math: true${fmtags}${fmcats}
 ---
 `;
     const mdblocks = await n2m.pageToMarkdown(id);
