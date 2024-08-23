@@ -54,25 +54,10 @@ LLM의 Knowledge Distillation 관련 최신 논문. On-policy generated data를 
 LLM과 같은 auto-regressive sequence models는 parameter 수를 증가 시킴으로써, 성능을 증대시켰고, 이는 배포의 어려움을 초래한다. 따라서, 이런 **큰 모델들의 성능을 유지하면서 parameter 수를 줄이는 것이 목표**가 되고 있다.
 
 
-Model Compression 기법 중 하나가 **knowledge distillation [1]**이다. 하지만, auto-regressive sequence models에서 teacher model의 output sequence 또는 token-level의 **fixed set을 만들어 사용하는 방식**은 **1) expensive**하고, 2) **teacher-student 간 output의 distribution mismatch**로 이끌 수 있다. **forward KL divergence를 최소화하는 현재 방식**은, student의 expression ability 부족으로 **성능이 좋지 못하다**.
+Model Compression 기법 중 하나가 **knowledge distillation [1]**이다. 하지만, auto-regressive sequence models에서 teacher model의 output sequence 또는 token-level의 **fixed set을 만들어 사용하는 방식**은 **1) expensive**하고, 2) **teacher-student 간 output의 distribution mismatch**(Imitation Learning에서의 문제점과 동일. DAgger[2] 등장)로 이끌 수 있다. **forward KL divergence를 최소화하는 현재 방식**은, student의 expression ability 부족으로 **성능이 좋지 못하다**.
 
 
 이 논문에서는, **Generalized KD (GKD)**를 통해 문제를 해결했다. **auto-regressive sequence models에 대한 KD를 Imitation learning으로 간주**했고, **student의 self-generated sequence를 통해 학습**할 수 있도록 했다. 또한, **reverse KL과 generalized JSD** 등을 통해 student의 expression ability 부족 문제를 해결했다.
-
-
-> 💡 **Imitation Learning**  
-> Reinforcement Learning에서 등장한 개념으로, 기존 RL에선 agent가 경험을 하면서 policy를 수정해 가며 학습하는 방식이라면, **Imitation Learning**에선 **Expert의 행동을 모방(expert의 행동을 담은 dataset으로 학습)하는 방식으로 학습이 이뤄진다**.  
->   
-> **Imitation Learning**은 **distribution shift**라는 문제점을 가진다. Train / Test 단계에서 마주하는 state 분포가 달라지는 것인데, **train 단계에서 마주하지 못한 상태를 test 단계에서 마주했을 때, 제대로 대처하지 못하는 것**이다.  
->   
-> 이 문제점을 해결하기 위해, **DAgger[2]**라는 방식이 등장했는데, agent가 스스로 행동하면서 생성한 데이터도 추가적으로 수집하는 방식이다. 대신, **헷갈리는 상태에선 expert의 feedback을 받으면서 data를 수집하는 방식**이다.
-
-
-	Reinforcement Learning에서 등장한 개념으로, 기존 RL에선 agent가 경험을 하면서 policy를 수정해 가며 학습하는 방식이라면, **Imitation Learning**에선 **Expert의 행동을 모방(expert의 행동을 담은 dataset으로 학습)하는 방식으로 학습이 이뤄진다**.
-	
-	**Imitation Learning**은 **distribution shift**라는 문제점을 가진다. Train / Test 단계에서 마주하는 state 분포가 달라지는 것인데, **train 단계에서 마주하지 못한 상태를 test 단계에서 마주했을 때, 제대로 대처하지 못하는 것**이다.
-	
-	이 문제점을 해결하기 위해, **DAgger[2]**라는 방식이 등장했는데, agent가 스스로 행동하면서 생성한 데이터도 추가적으로 수집하는 방식이다. 대신, **헷갈리는 상태에선 expert의 feedback을 받으면서 data를 수집하는 방식**이다.
 
 
 GKD는 autoregressive LMs에 대한 KD methods를 통합했다. 서로 다른 크기의 T5 모델에 on-policy methods를 도입해, 성능 향상을 이끌었다. 
