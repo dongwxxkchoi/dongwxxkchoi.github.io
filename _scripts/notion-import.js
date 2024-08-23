@@ -124,7 +124,7 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
       fmcats += "]";
     }
     const fm = `---
-layout: post
+layout: single
 date: ${date}
 title: "${title}"
 use_math: true${fmtags}${fmcats}
