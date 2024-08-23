@@ -149,7 +149,12 @@ use_math: true${fmtags}${fmcats}
     console.log(md);
     
     md = escapeCodeBlock(md);
+    console.log("Converted Markdown Content After 2:");
+    console.log(md);
+    
     md = replaceTitleOutsideRawBlocks(md);
+    console.log("Converted Markdown Content After 3:");
+    console.log(md);
 
     const ftitle = `${date}-${title.replaceAll(" ", "-")}.md`;
 
