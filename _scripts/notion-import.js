@@ -38,6 +38,13 @@ function replaceTitleOutsideRawBlocks(body) {
   return body;
 }
 
+function convertMathBlocks(md) {
+  // 수식 블록을 올바르게 변환
+  return md.replace(/\[\[(.*?)\]\]/gs, function (match, mathContent) {
+    return `$$${mathContent}$$`;
+  });
+}
+
 // passing notion client to the option
 const n2m = new NotionToMarkdown({ notionClient: notion });
 
@@ -135,6 +142,7 @@ use_math: true${fmtags}${fmcats}
     if (md === "") {
       continue;
     }
+    md = convertMathBlocks(md);
     md = escapeCodeBlock(md);
     md = replaceTitleOutsideRawBlocks(md);
 
