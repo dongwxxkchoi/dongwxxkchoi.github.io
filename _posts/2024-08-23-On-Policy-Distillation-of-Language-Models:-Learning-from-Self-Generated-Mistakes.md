@@ -218,29 +218,29 @@ $$
 Imitation Learning(IL) 중 on-policy imitation approaches(DAgger)을 통해 **student policy를 통해 sequence를 반복적으로 수집**하고, 해당 **sequence에 대한 expert labels**을 얻고, **해당 dataset에서 student를 train**시키는 방법을 제안한다.
 
 
-**Student의** **self-generated output sequences에 대한 erroneous tokens**에 대해 **teacher의 logit으로 부터 token-specific feedback을 받는 이 방법**을 **on-policy KD** 라고 한다. student는 $y_{<n}$ **상태에서, teacher의 token-level distributions인**  $p_T(y_n|x)$**을 모방**한다. on-policy loss인 $\mathcal{L}_{OD}$는 아래와 같이 정의된다.
+**Student의** **self-generated output sequences에 대한 erroneous tokens**에 대해 **teacher의 logit으로 부터 token-specific feedback을 받는 이 방법**을 **on-policy KD** 라고 한다. student는 $y_{<n}$ **상태에서, teacher의 token-level distributions인**  $p_T(y_n\|x)$**을 모방**한다. on-policy loss인 $\mathcal{L}_{OD}$는 아래와 같이 정의된다.
 
 
 $$
-L_{OD}(\theta):=\mathbb{E}_{x\sim X}[\mathbb{E}_{y\sim p_S(\cdot|x)}[\mathcal{D}_{KL}(p_T||p_S^\theta)(y|x)]]
+L_{OD}(\theta):=\mathbb{E}_{x\sim X}[\mathbb{E}_{y\sim p_S(\cdot\|x)}[\mathcal{D}_{KL}(p_T\|\|p_S^\theta)(y|x)]]
 $$
 
 
-해당 방법 수행 시, teacher의 feedback을 받기 때문에, student’s sampling distribution인 $p_S(\cdot|x)$에서의 backpropagation이 일어나지 않는다. 이는 training을 안정적으로 만들고, computationally efficient하다. training은 temperature $\gamma=1$로 다양한 sequence를 generate하도록 한다. 또한, student를 이용해 sequence를 generate하는 것은 teacher를 이용하는 것에 비해 cost도 적게 든다.
+해당 방법 수행 시, teacher의 feedback을 받기 때문에, student’s sampling distribution인 $p_S(\cdot\|x)$에서의 backpropagation이 일어나지 않는다. 이는 training을 안정적으로 만들고, computationally efficient하다. training은 temperature $\gamma=1$로 다양한 sequence를 generate하도록 한다. 또한, student를 이용해 sequence를 generate하는 것은 teacher를 이용하는 것에 비해 cost도 적게 든다.
 
 
 on-policy KD에 더해 supervised approach와 on-policy approach를 통합했고, 이를 Generalized KD (GKD)라고 한다. 따라서, GKD는 output-sequence로 fixed dataset과 on-policy student-generated sequences를 둘 다 사용한다. 따라서, GKD는 다음 objective를 최소화한다.
 
 
 $$
-L_{GKD}(\theta):=(1-\lambda)\mathbb{E}_{(x,y)\sim(X,Y)}[\mathcal{D}(p_T||p_S^\theta)(y|x)]+\lambda\mathbb{E}_{x\sim X}[\mathbb{E}_{y\sim p_S(\cdot|x)}[\mathcal{D}(p_T||p_S^\theta)(y|x)]]
+L_{GKD}(\theta):=(1-\lambda)\mathbb{E}_{(x,y)\sim(X,Y)}[\mathcal{D}(p_T\|\|p_S^\theta)(y\|x)]+\lambda\mathbb{E}_{x\sim X}[\mathbb{E}_{y\sim p_S(\cdot\|x)}[\mathcal{D}(p_T\|\|p_S^\theta)(y\|x)]]
 $$
 
 
-$\mathcal{D}(p_T,p_S)(y|x)$은 teacher-student distributions간의 divergence이고, $\lambda\in[0,1]$은 student data fraction을 조절하는 hyper-parameter이다. $\lambda$ 값에 따른 GKD의 결과는 앞으로 확인해 볼 것이다.
+$\mathcal{D}(p_T,p_S)(y\|x)$은 teacher-student distributions간의 divergence이고, $\lambda\in[0,1]$은 student data fraction을 조절하는 hyper-parameter이다. $\lambda$ 값에 따른 GKD의 결과는 앞으로 확인해 볼 것이다.
 
 
-![5](/assets/img/2024-08-23-On-Policy-Distillation-of-Language-Models:-Learning-from-Self-Generated-Mistakes.md/5.png)_GKD(Generalized Knowledge Distillation) - Algorithm 1_
+![5](/assets/img/2024-08-23-On-Policy-Distillation-of-Language-Models:-Learning-from-Self-Generated-Mistakes.md/5.png)
 
 
 **Remark**
