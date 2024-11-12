@@ -5,6 +5,9 @@ title: "David Silver - RL Lecture 2 (Markov Decision Process)"
 use_math: true
 tags: [강의/책 정리, ]
 categories: [AI, ]
+author_profile: false
+sidebar:
+	nav: "docs"
 ---
 
 

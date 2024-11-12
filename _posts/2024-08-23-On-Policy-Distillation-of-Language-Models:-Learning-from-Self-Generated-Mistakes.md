@@ -5,6 +5,9 @@ title: "On-Policy Distillation of Language Models: Learning from Self-Generated 
 use_math: true
 tags: [논문 정리, ]
 categories: [AI, ]
+author_profile: false
+sidebar:
+	nav: "docs"
 ---
 
 
