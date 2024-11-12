@@ -133,7 +133,8 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
 layout: single
 date: ${date}
 title: "${title}"
-use_math: true${fmtags}${fmcats}
+use_math: true
+author_profile: false${fmtags}${fmcats}
 ---
 `;
     const mdblocks = await n2m.pageToMarkdown(id);
