@@ -3,6 +3,7 @@ layout: single
 date: 2024-10-14
 title: "David Silver - RL Lecture 3 (Planning by Dynamic Programming)"
 use_math: true
+author_profile: false
 tags: [강의/책 정리, ]
 categories: [AI, ]
 ---

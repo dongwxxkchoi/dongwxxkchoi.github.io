@@ -3,6 +3,7 @@ layout: single
 date: 2023-06-29
 title: "CS224n - Lecture 2 (Neural Classifiers)"
 use_math: true
+author_profile: false
 tags: [강의/책 정리, ]
 categories: [AI, ]
 ---

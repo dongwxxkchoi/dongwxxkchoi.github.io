@@ -3,6 +3,7 @@ layout: single
 date: 2023-07-18
 title: "CS224n - Lecture 9 (Self-Attention, Transformer)"
 use_math: true
+author_profile: false
 tags: [강의/책 정리, ]
 categories: [AI, ]
 ---

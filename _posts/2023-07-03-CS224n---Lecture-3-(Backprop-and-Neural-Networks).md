@@ -3,6 +3,7 @@ layout: single
 date: 2023-07-03
 title: "CS224n - Lecture 3 (Backprop and Neural Networks)"
 use_math: true
+author_profile: false
 tags: [강의/책 정리, ]
 categories: [AI, ]
 ---
