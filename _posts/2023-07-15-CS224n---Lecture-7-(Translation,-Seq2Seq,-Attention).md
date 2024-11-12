@@ -3,6 +3,7 @@ layout: single
 date: 2023-07-15
 title: "CS224n - Lecture 7 (Translation, Seq2Seq, Attention)"
 use_math: true
+author_profile: false
 tags: [강의/책 정리, ]
 categories: [AI, ]
 ---

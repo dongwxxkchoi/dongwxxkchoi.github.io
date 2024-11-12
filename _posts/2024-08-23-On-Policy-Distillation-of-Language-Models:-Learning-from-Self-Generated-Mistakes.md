@@ -3,6 +3,7 @@ layout: single
 date: 2024-08-23
 title: "On-Policy Distillation of Language Models: Learning from Self-Generated Mistakes"
 use_math: true
+author_profile: false
 tags: [논문 정리, ]
 categories: [AI, ]
 ---
