@@ -12,16 +12,16 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "air" #"default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "en-US"
 rtl                      : # true, false (default) # turns direction of the page into right to left for RTL languages
-title                    : "Site Title"
+title                    : "AISA Lab"
 title_separator          : "-"
-subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Your Name"
-description              : "An amazing website."
+subtitle                 : "Towards AI Safety and Alignemnt" # site tagline that appears below site title in masthead
+name                     : "Choi Dongwook"
+description              : "AI Safety & Alignment를 연구하고자 하는 대학생입니다! 관련된 논문이나 강의 정리 및 여러 주제들을 정리하고 있습니다."
 url                      : "https://dongwxxkchoi.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -113,29 +113,29 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
+  name             : "Choi Dongwook"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
-  location         : "Somewhere"
+  bio              : "AI researcher를 희망하는 소프트웨어학부 4학년 대학생입니다."
+  location         : "South Korea"
   email            :
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      # url: "mailto:your.name@email.com"
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
+      url: "dwchoi0610@gmail.com"
+    # - label: "Website"
+    #   icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
+    # - label: "Twitter"
+      # icon: "fab fa-fw fa-twitter-square"
       # url: "https://twitter.com/"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      # url: "https://facebook.com/"
+    # - label: "Facebook"
+    #   icon: "fab fa-fw fa-facebook-square"
+    #   # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
+      url: "https://github.com/dongwxxkchoi"
+    # - label: "Instagram"
+      # icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
 
 # Site Footer
