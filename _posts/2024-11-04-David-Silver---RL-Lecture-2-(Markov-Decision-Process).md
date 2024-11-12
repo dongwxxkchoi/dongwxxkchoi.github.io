@@ -6,8 +6,6 @@ use_math: true
 tags: [강의/책 정리, ]
 categories: [AI, ]
 author_profile: false
-sidebar:
-	nav: "docs"
 ---
 
 

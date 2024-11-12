@@ -6,8 +6,6 @@ use_math: true
 tags: [강의/책 정리, ]
 categories: [AI, ]
 author_profile: false
-sidebar:
-	nav: "docs"
 ---
 
 Bellman equation을 통해 recursive하게 value function을 나타내는 데에 성공했다. 하지만, optimal value function을 얻기 위해선, max term 해결을 위해, closed-form 방법이 아닌 Iterative method가 필요했었다.어떻게 푸는지 확인해 보겠습니다.
