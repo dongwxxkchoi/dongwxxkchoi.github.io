@@ -5,6 +5,7 @@ title: "David Silver - RL Lecture 4 (Model-free prediction)"
 use_math: true
 tags: [강의/책 정리, ]
 categories: [AI, ]
+author_profile: false
 ---
 
 지금까지, RL 문제를 정의하는 Markov Decision Process가 뭔지, 그리고 Dynamic Programming 방식을 사용하는 Policy Iteration, Value Iteration 방법에 대해 알아 보았습니다. Lecture 3의 후반부에, full-width backup 방법 대신 sample을 이용하는 sample backup 방법에 대해 잠깐 맛보기를 했습니다. Lecture 4에선 sample backup 방법을 이용해, environments를 모르는 Model-free 환경에서 value function을 estimate 하는 방법을 배울 것입니다.
