@@ -156,15 +156,7 @@ author_profile: false${fmtags}${fmcats}
     const ftitle = `${date}-${title.replaceAll(" ", "-")}.md`;
     const filePath = path.join(root, ftitle);
 
-    const newContent = fm + edited_md;
-    if (fs.existsSync(filePath)) {
-      const currentContent = fs.readFileSync(filePath, "utf-8");
-      if (generateHash(currentContent) === generateHash(newContent)) {
-        console.log(`No changes detected for ${ftitle}, skipping.`);
-        continue;  // 파일 내용이 동일하면 건너뜀
-      }
-    }
-
+    
     let index = 0;
     let edited_md = md.replace(
       /!\[(.*?)\]\((.*?)\)/g,
@@ -174,28 +166,36 @@ author_profile: false${fmtags}${fmcats}
           fs.mkdirSync(dirname, { recursive: true });
         }
         const filename = path.join(dirname, `${index}.png`);
-
+        
         axios({
           method: "get",
           url: p2,
           responseType: "stream",
         })
-          .then(function (response) {
-            let file = fs.createWriteStream(`${filename}`);
-            response.data.pipe(file);
-          })
-          .catch(function (error) {
-            console.log(error);
-          });
-
+        .then(function (response) {
+          let file = fs.createWriteStream(`${filename}`);
+          response.data.pipe(file);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+        
         let res;
         if (p1 === "") res = "";
         else res = `_${p1}_`;
-
+        
         return `![${index++}](/${filename})${res}`;
       }
     );
-
+    
+    const newContent = fm + edited_md;
+    if (fs.existsSync(filePath)) {
+      const currentContent = fs.readFileSync(filePath, "utf-8");
+      if (generateHash(currentContent) === generateHash(newContent)) {
+        console.log(`No changes detected for ${ftitle}, skipping.`);
+        continue;  // 파일 내용이 동일하면 건너뜀
+      }
+    }
     //writing to file
     // fs.writeFile(path.join(root, ftitle), fm + edited_md, (err) => {
     //   if (err) {
