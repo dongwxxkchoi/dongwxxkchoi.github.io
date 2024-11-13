@@ -149,73 +149,73 @@ categories: [AI, ]
 			⇒ 이런 **Greedy Methods**는 고질적 문제가 있는데, 바로 **비슷한 단어를 반복 생성**한다는 것이다.
 
 
-				![21](/assets/img/2023-07-28-CS224n---Lecture-12-(Natural-Language-Generation).md/21.png)
+			![21](/assets/img/2023-07-28-CS224n---Lecture-12-(Natural-Language-Generation).md/21.png)
 
 
-				![22](/assets/img/2023-07-28-CS224n---Lecture-12-(Natural-Language-Generation).md/22.png)
+			![22](/assets/img/2023-07-28-CS224n---Lecture-12-(Natural-Language-Generation).md/22.png)
 
 
-				![23](/assets/img/2023-07-28-CS224n---Lecture-12-(Natural-Language-Generation).md/23.png)_openai : GPT_
+			![23](/assets/img/2023-07-28-CS224n---Lecture-12-(Natural-Language-Generation).md/23.png)_openai : GPT_
 
-				- 그림처럼, 반복이 거듭될수록, negative log likelihood가 점점 낮아져, **모델이 확신을 갖는(confident) 것**
-				- 일반 LSTM 단위에선 문제가 되지 않지만, **Transformer 레벨로 올라가면 문제**가 되는 것을 알 수 있음
+			- 그림처럼, 반복이 거듭될수록, negative log likelihood가 점점 낮아져, **모델이 확신을 갖는(confident) 것**
+			- 일반 LSTM 단위에선 문제가 되지 않지만, **Transformer 레벨로 올라가면 문제**가 되는 것을 알 수 있음
 
-					→ 일반 RNN은 bottleneck이 일어나기 때문
-
-
-					→ **bottleneck을 해결한 transformer에선 반복을 거듭하는 경향**이 발생함 
+				→ 일반 RNN은 bottleneck이 일어나기 때문
 
 
-					→ 문제가 되는 것이, 어떤 문장을 15번 반복 말했을 때, 다음 문장 또한 같은 것을 말할 확률 높아짐 **⇒ big problem**
+				→ **bottleneck을 해결한 transformer에선 반복을 거듭하는 경향**이 발생함 
 
 
-					⇒ repetition을 어떻게 해결할 수 있을까?
+				→ 문제가 되는 것이, 어떤 문장을 15번 반복 말했을 때, 다음 문장 또한 같은 것을 말할 확률 높아짐 **⇒ big problem**
 
 
-						**inference time**
-
-						- **Don’t repeat n-grams**
-
-							→ **같은 단어 반복 x** (simple)
+				⇒ repetition을 어떻게 해결할 수 있을까?
 
 
-						**train time**
+					**inference time**
 
-						- **loss function**
+					- **Don’t repeat n-grams**
 
-							→ **다른 time step** 에서의 **hidden activation의 similarity를 최소화**
-
-						- **coverage loss**
-
-							→ 같은 토큰에 대해 penalty를 부과해, model이 강제로 다른 text를 생성하도록 하는 방법
-
-						- **unlikelihood objective**
-
-							⇒ 이미 생성된 token에 대해 penalty 부여
+						→ **같은 단어 반복 x** (simple)
 
 
-				하지만, 기본적으로 문제는 greedy algorithm에 존재
+					**train time**
+
+					- **loss function**
+
+						→ **다른 time step** 에서의 **hidden activation의 similarity를 최소화**
+
+					- **coverage loss**
+
+						→ 같은 토큰에 대해 penalty를 부과해, model이 강제로 다른 text를 생성하도록 하는 방법
+
+					- **unlikelihood objective**
+
+						⇒ 이미 생성된 token에 대해 penalty 부여
 
 
-				⇒ **사람은 likelihood를 maximize하는 그런 방식으로 대화하지 않는다..!**
+			하지만, 기본적으로 문제는 greedy algorithm에 존재
 
 
-				![24](/assets/img/2023-07-28-CS224n---Lecture-12-(Natural-Language-Generation).md/24.png)
+			⇒ **사람은 likelihood를 maximize하는 그런 방식으로 대화하지 않는다..!**
 
 
-				“사람이 쓴 text” / “Beam Search 방식으로 decoded된 text”의 per time step probability를 비교한 그래프
+			![24](/assets/img/2023-07-28-CS224n---Lecture-12-(Natural-Language-Generation).md/24.png)
 
 
-				확실히 **beam search로 decoded된 text의 각 선택은 probability가 높고, variance가 적은 경향**을 보인다.
+			“사람이 쓴 text” / “Beam Search 방식으로 decoded된 text”의 per time step probability를 비교한 그래프
 
 
-				⇒ 이는, 그럴듯하지만 **사람의 방식과는 차이**가 있었고, 이런 방식을 반복한다면 문제
+			확실히 **beam search로 decoded된 text의 각 선택은 probability가 높고, variance가 적은 경향**을 보인다.
 
 
-				⇒ 우리의 궁극적 목표는 **human language pattern의 uncertainty**와 **text의 decoding과 matching**
+			⇒ 이는, 그럴듯하지만 **사람의 방식과는 차이**가 있었고, 이런 방식을 반복한다면 문제
 
 
-				⇒ sampling 방식을 다양화하는 방법을 도입
+			⇒ 우리의 궁극적 목표는 **human language pattern의 uncertainty**와 **text의 decoding과 matching**
+
+
+			⇒ sampling 방식을 다양화하는 방법을 도입
 
 		- **Random Sampling**
 
