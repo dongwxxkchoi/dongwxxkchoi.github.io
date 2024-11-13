@@ -1,7 +1,7 @@
 ---
 layout: single
 date: 2023-08-13
-title: "CS224n - Lecture 15 ("
+title: "CS224n - Lecture 15 (Add Knowledge to Language Models)"
 use_math: true
 author_profile: false
 tags: [강의/책 정리, ]
@@ -24,11 +24,11 @@ categories: [AI, ]
 - 현재 대부분의 **language models**는 **2가지 방식으로 sequence의 probability를 학습**한다.
 	1. **sequence of text의 다음 단어를 예측**
 
-		![0](/assets/img/2023-08-13-CS224n---Lecture-15-(.md/0.png)
+		![0](/assets/img/2023-08-13-CS224n---Lecture-15-(Add-Knowledge-to-Language-Models).md/0.png)
 
 	2. **masked token을 bidirectional context를 사용해 예측 (ex. BERT)**
 
-		![1](/assets/img/2023-08-13-CS224n---Lecture-15-(.md/1.png)
+		![1](/assets/img/2023-08-13-CS224n---Lecture-15-(Add-Knowledge-to-Language-Models).md/1.png)
 
 
 	⇒ 두 방법 모두 human annotated data 즉, labeled data가 필요 없음
@@ -51,13 +51,13 @@ categories: [AI, ]
 
 - “Petroni et al., EMNLP 2019” 에서 BERT-Large를 test
 
-![2](/assets/img/2023-08-13-CS224n---Lecture-15-(.md/2.png)
+![2](/assets/img/2023-08-13-CS224n---Lecture-15-(Add-Knowledge-to-Language-Models).md/2.png)
 
 
-![3](/assets/img/2023-08-13-CS224n---Lecture-15-(.md/3.png)
+![3](/assets/img/2023-08-13-CS224n---Lecture-15-(Add-Knowledge-to-Language-Models).md/3.png)
 
 
-![4](/assets/img/2023-08-13-CS224n---Lecture-15-(.md/4.png)
+![4](/assets/img/2023-08-13-CS224n---Lecture-15-(Add-Knowledge-to-Language-Models).md/4.png)
 
 
 초록색 답이 정답, 빨간색 답이 오답 
@@ -117,7 +117,7 @@ categories: [AI, ]
 
 - **traditional knowledge bases**
 
-	![5](/assets/img/2023-08-13-CS224n---Lecture-15-(.md/5.png)
+	![5](/assets/img/2023-08-13-CS224n---Lecture-15-(Add-Knowledge-to-Language-Models).md/5.png)
 
 	- node : entity
 
@@ -133,7 +133,7 @@ categories: [AI, ]
 	- apparent entity, relation, tail entity 라고도 부름
 - **Querying language models as knowlede basis**
 
-	![6](/assets/img/2023-08-13-CS224n---Lecture-15-(.md/6.png)
+	![6](/assets/img/2023-08-13-CS224n---Lecture-15-(Add-Knowledge-to-Language-Models).md/6.png)
 
 	- 특징
 		- 방대한 양의 **unstructured text data**에 대해 학습
@@ -174,7 +174,7 @@ categories: [AI, ]
 			→ fine-tune but 오래된 기억이 남아있는지 어떻게 알 수 있나?
 
 
-![7](/assets/img/2023-08-13-CS224n---Lecture-15-(.md/7.png)
+![7](/assets/img/2023-08-13-CS224n---Lecture-15-(Add-Knowledge-to-Language-Models).md/7.png)
 
 
 ⇒ 그래서 이를 위한 기법들이 소개되고 있음
@@ -184,18 +184,14 @@ categories: [AI, ]
 ## Techniques to add knowledge to LMs
 
 
-![8](/assets/img/2023-08-13-CS224n---Lecture-15-(.md/8.png)
+![8](/assets/img/2023-08-13-CS224n---Lecture-15-(Add-Knowledge-to-Language-Models).md/8.png)
 
 
 
 ### Adding pretrained entity embeddings
 
 
-![9](/assets/img/2023-08-13-CS224n---Lecture-15-(.md/9.png)
-
-- 세상에 대한 **facts** ⇒ **entity로 설명 가능**
-
-	ex. Washington & United States → <u>Washington</u> was the first president of the <u>US</u>
+![9](/assets/img/2023-08-13-CS224n---Lecture-15-(Add-Knowledge-to-Language-Models).md/9.png)
 
 - pretrained word는 그런 **entity에 대한 notion이 없음**
 
@@ -212,7 +208,7 @@ categories: [AI, ]
 
 - **Entity linking?**
 
-	![10](/assets/img/2023-08-13-CS224n---Lecture-15-(.md/10.png)
+	![10](/assets/img/2023-08-13-CS224n---Lecture-15-(Add-Knowledge-to-Language-Models).md/10.png)
 
 	- word embedding
 
@@ -246,7 +242,7 @@ categories: [AI, ]
 
 - **Add pretrained entity embeddings**
 
-	![11](/assets/img/2023-08-13-CS224n---Lecture-15-(.md/11.png)
+	![11](/assets/img/2023-08-13-CS224n---Lecture-15-(Add-Knowledge-to-Language-Models).md/11.png)
 
 	- **특정 word** $w_j$**와 특정 entity** $e_k$ **사이에 alignment가 있는 걸 안다**고 가정
 
@@ -261,7 +257,7 @@ categories: [AI, ]
 	**⇒ fusion layer**
 
 
-	![12](/assets/img/2023-08-13-CS224n---Lecture-15-(.md/12.png)
+	![12](/assets/img/2023-08-13-CS224n---Lecture-15-(Add-Knowledge-to-Language-Models).md/12.png)
 
 	- $W_t$ 와 $W_e$ : weight matrix
 
@@ -280,7 +276,7 @@ categories: [AI, ]
 #### ERNIE (Enhanced Language Representation with Informative Entities)
 
 
-![13](/assets/img/2023-08-13-CS224n---Lecture-15-(.md/13.png)
+![13](/assets/img/2023-08-13-CS224n---Lecture-15-(Add-Knowledge-to-Language-Models).md/13.png)
 
 - **pretrained entity embeddings 제공**
 - **구조**
@@ -304,13 +300,13 @@ categories: [AI, ]
 			⇒ 이렇게 이전 timestep의 input들이 attention을 거쳐
 
 
-			![14](/assets/img/2023-08-13-CS224n---Lecture-15-(.md/14.png)
+			![14](/assets/img/2023-08-13-CS224n---Lecture-15-(Add-Knowledge-to-Language-Models).md/14.png)
 
 
 			⇒ weight matrix들과 product되어 single hidden state output
 
 
-			![15](/assets/img/2023-08-13-CS224n---Lecture-15-(.md/15.png)
+			![15](/assets/img/2023-08-13-CS224n---Lecture-15-(Add-Knowledge-to-Language-Models).md/15.png)
 
 
 			⇒ 이 hidden state를 통해 사용된 $w_j$와 $e_k$를 update
@@ -330,18 +326,18 @@ categories: [AI, ]
 
 	- **randomly mask token-entity alignments**
 
-		![16](/assets/img/2023-08-13-CS224n---Lecture-15-(.md/16.png)
+		![16](/assets/img/2023-08-13-CS224n---Lecture-15-(Add-Knowledge-to-Language-Models).md/16.png)
 
 
 		⇒ **word의 entity를 masking 해놓고, entity를 추측**
 
 	- 최종 Loss
 
-		![17](/assets/img/2023-08-13-CS224n---Lecture-15-(.md/17.png)
+		![17](/assets/img/2023-08-13-CS224n---Lecture-15-(Add-Knowledge-to-Language-Models).md/17.png)
 
 - **성과**
 
-	![18](/assets/img/2023-08-13-CS224n---Lecture-15-(.md/18.png)
+	![18](/assets/img/2023-08-13-CS224n---Lecture-15-(Add-Knowledge-to-Language-Models).md/18.png)
 
 - **강점**
 	- entity와 context info의 combine
@@ -359,9 +355,6 @@ categories: [AI, ]
 
 #### KnowBERT
 
-
-![19](/assets/img/2023-08-13-CS224n---Lecture-15-(.md/19.png)
-
 - **BERT**에서 downstream task로 **Wikipedia 등의 다양한 지식 베이스에서 추출한 정보를 추가적으로 활용**해 **entity와 관련된 지식을 encoding**함
 
 	→ 이후 **entity를 예측하는 entity linker (EL)을 추가**해서 pretraining 하는 방법 
@@ -374,7 +367,7 @@ categories: [AI, ]
 ### Use an external memory
 
 
-![20](/assets/img/2023-08-13-CS224n---Lecture-15-(.md/20.png)
+![19](/assets/img/2023-08-13-CS224n---Lecture-15-(Add-Knowledge-to-Language-Models).md/19.png)
 
 - **pretrained entity embeddings의 단점**
 
@@ -405,12 +398,12 @@ categories: [AI, ]
 Language Modeling)
 
 
-![21](/assets/img/2023-08-13-CS224n---Lecture-15-(.md/21.png)
+![20](/assets/img/2023-08-13-CS224n---Lecture-15-(Add-Knowledge-to-Language-Models).md/20.png)
 
 - **특징**
 	- **knowledge graph**
 
-		![22](/assets/img/2023-08-13-CS224n---Lecture-15-(.md/22.png)
+		![21](/assets/img/2023-08-13-CS224n---Lecture-15-(Add-Knowledge-to-Language-Models).md/21.png)
 
 		- sequence 속 words와 relevant entities가 주어졌을 때,
 
@@ -429,7 +422,7 @@ Language Modeling)
 
 - **언제 knowledge graph를 사용**해야 할까?
 
-	![23](/assets/img/2023-08-13-CS224n---Lecture-15-(.md/23.png)
+	![22](/assets/img/2023-08-13-CS224n---Lecture-15-(Add-Knowledge-to-Language-Models).md/22.png)
 
 	- Sequence의 words들이 **LSTM cell**을 통과
 	- **최종 target 전에 왔을 때 output**으로 **다음 단어**가
@@ -447,7 +440,7 @@ Language Modeling)
 
 - **어떻게 LM이 local KG에 있는지 아닌지를 판단?**
 
-	![24](/assets/img/2023-08-13-CS224n---Lecture-15-(.md/24.png)
+	![23](/assets/img/2023-08-13-CS224n---Lecture-15-(Add-Knowledge-to-Language-Models).md/23.png)
 
 	- **KG triple = (parent entity, relation, tail entity)**
 
@@ -489,12 +482,12 @@ Language Modeling)
 		⇒ 그 aliases 중에서 **가장 likely한 것**을 가져옴 
 
 
-	![25](/assets/img/2023-08-13-CS224n---Lecture-15-(.md/25.png)
+	![24](/assets/img/2023-08-13-CS224n---Lecture-15-(Add-Knowledge-to-Language-Models).md/24.png)
 
 - **다른 경우?**
 	- **New Entity의 경우는?**
 
-		![26](/assets/img/2023-08-13-CS224n---Lecture-15-(.md/26.png)
+		![25](/assets/img/2023-08-13-CS224n---Lecture-15-(Add-Knowledge-to-Language-Models).md/25.png)
 
 
 		→ full KG에서 가장 top-scoring entity를 찾음
@@ -506,7 +499,7 @@ Language Modeling)
 		- Next word → 동일한 방식
 	- **Entity가 아니라면?**
 
-		![27](/assets/img/2023-08-13-CS224n---Lecture-15-(.md/27.png)
+		![26](/assets/img/2023-08-13-CS224n---Lecture-15-(Add-Knowledge-to-Language-Models).md/26.png)
 
 		- **Next entity**
 
@@ -526,14 +519,14 @@ Language Modeling)
 		**direct한 변화** 줄 수 있음
 
 
-		![28](/assets/img/2023-08-13-CS224n---Lecture-15-(.md/28.png)
+		![27](/assets/img/2023-08-13-CS224n---Lecture-15-(Add-Knowledge-to-Language-Models).md/27.png)
 
 
 
 #### KNN-LM
 
 
-![29](/assets/img/2023-08-13-CS224n---Lecture-15-(.md/29.png)
+![28](/assets/img/2023-08-13-CS224n---Lecture-15-(Add-Knowledge-to-Language-Models).md/28.png)
 
 - next word를 예측하는 것 보다 **text sequence 사이의 similarity를 배우는 것**이 **쉽다!**
 
@@ -542,7 +535,7 @@ Language Modeling)
 - **rare facts와 long-tail sequence등**에 **더 좋은 성능**을 보이는 것을 확인!
 - **text sequences를 nearest neighbor datastore에 store!**
 
-	![30](/assets/img/2023-08-13-CS224n---Lecture-15-(.md/30.png)
+	![29](/assets/img/2023-08-13-CS224n---Lecture-15-(Add-Knowledge-to-Language-Models).md/29.png)
 
 	- $\lambda$ : hyperparameter
 
@@ -554,7 +547,7 @@ Language Modeling)
 ### Modifying the training data
 
 
-![31](/assets/img/2023-08-13-CS224n---Lecture-15-(.md/31.png)
+![30](/assets/img/2023-08-13-CS224n---Lecture-15-(Add-Knowledge-to-Language-Models).md/30.png)
 
 - 위에서의 방식은 **explicitly**한 방식이었음
 
@@ -571,7 +564,7 @@ Language Modeling)
 #### WKLM (Pretrained Encyclopedia: Weakly Supervised Knowledge-Pretrained Language Model)
 
 
-![32](/assets/img/2023-08-13-CS224n---Lecture-15-(.md/32.png)
+![31](/assets/img/2023-08-13-CS224n---Lecture-15-(Add-Knowledge-to-Language-Models).md/31.png)
 
 - model이 **knowledge가 true인지 false인지 구별**하도록 학습
 - **같은 type**의 **다른 entity**로 mention을 교체
@@ -590,7 +583,7 @@ Language Modeling)
 		(단지 문법이 틀려서 틀렸다고 판단하는 것이 아닌)
 
 
-	![33](/assets/img/2023-08-13-CS224n---Lecture-15-(.md/33.png)
+	![32](/assets/img/2023-08-13-CS224n---Lecture-15-(Add-Knowledge-to-Language-Models).md/32.png)
 
 - **그림 설명**
 	- 좌측 : 원래 article
@@ -612,7 +605,7 @@ Language Modeling)
 
 - **entity replacement loss 이용**
 
-	![34](/assets/img/2023-08-13-CS224n---Lecture-15-(.md/34.png)_-가 붙어야 하지 않나?_
+	![33](/assets/img/2023-08-13-CS224n---Lecture-15-(Add-Knowledge-to-Language-Models).md/33.png)_-가 붙어야 하지 않나?_
 
 	- e: entity, C: context, $\epsilon^+$ : true entity mention
 	- True mention에 대해선 확률 증대
@@ -621,7 +614,7 @@ Language Modeling)
 	**Total Loss**
 
 
-	![35](/assets/img/2023-08-13-CS224n---Lecture-15-(.md/35.png)
+	![34](/assets/img/2023-08-13-CS224n---Lecture-15-(Add-Knowledge-to-Language-Models).md/34.png)
 
 	- MLM loss는 token-level
 	- entRep loss는 entity-level
@@ -634,7 +627,7 @@ Language Modeling)
 - 이처럼 **entity level에서 modify를 진행**하는 것은 **LM의 지식의 양을 늘려줄 수 있다.**
 - **성과**
 
-	![36](/assets/img/2023-08-13-CS224n---Lecture-15-(.md/36.png)
+	![35](/assets/img/2023-08-13-CS224n---Lecture-15-(Add-Knowledge-to-Language-Models).md/35.png)
 
 	- BERT, GPT-2 보다 성능 좋음 (fact completion tasks)
 	- ERNIE 보다 성능 좋음 (downstream task - entity typing)
@@ -659,7 +652,7 @@ Language Modeling)
 #### ERNIE (Enhanced Representation through Knowledge Integration)
 
 
-![37](/assets/img/2023-08-13-CS224n---Lecture-15-(.md/37.png)
+![36](/assets/img/2023-08-13-CS224n---Lecture-15-(Add-Knowledge-to-Language-Models).md/36.png)
 
 - **phrase-level, entity-level masking 기법**으로 downstream Chinese NLP tasks에서 좋은 성능
 
@@ -667,11 +660,11 @@ Language Modeling)
 #### salient span masking
 
 
-![38](/assets/img/2023-08-13-CS224n---Lecture-15-(.md/38.png)
+![37](/assets/img/2023-08-13-CS224n---Lecture-15-(Add-Knowledge-to-Language-Models).md/37.png)
 
 - closed domain q&a tasks에서 좋은 성능
 
-![39](/assets/img/2023-08-13-CS224n---Lecture-15-(.md/39.png)
+![38](/assets/img/2023-08-13-CS224n---Lecture-15-(Add-Knowledge-to-Language-Models).md/38.png)
 
 
 
@@ -682,7 +675,7 @@ Language Modeling)
 #### LAMA
 
 
-![40](/assets/img/2023-08-13-CS224n---Lecture-15-(.md/40.png)
+![39](/assets/img/2023-08-13-CS224n---Lecture-15-(Add-Knowledge-to-Language-Models).md/39.png)
 
 - LM에 얼마나 많은 knowledge가 이미 encode 되었는지? (commonsense / factual)
 
@@ -696,7 +689,7 @@ Language Modeling)
 - KG triples와 question-answer pairs로부터 빈칸이 있는 문장을 생성
 - LM을 supervised relation extraction (knowledge triple 추출)과 QA systems을 비교하는 방식으로 평가 수행
 
-![41](/assets/img/2023-08-13-CS224n---Lecture-15-(.md/41.png)
+![40](/assets/img/2023-08-13-CS224n---Lecture-15-(Add-Knowledge-to-Language-Models).md/40.png)
 
 - **P@1**
 
@@ -710,7 +703,7 @@ Language Modeling)
 	→ 정확하게 답변할 수 있는 확률이 높다
 
 
-![42](/assets/img/2023-08-13-CS224n---Lecture-15-(.md/42.png)_github에서 사용 가능 ; The cat is on the [MASK]_
+![41](/assets/img/2023-08-13-CS224n---Lecture-15-(Add-Knowledge-to-Language-Models).md/41.png)_github에서 사용 가능 ; The cat is on the [MASK]_
 
 - **한계**
 	- 왜 model이 그런 결과가 나왔는지 알기 힘들다
@@ -733,7 +726,7 @@ Language Modeling)
 
 		- 이름이 incorrect prior 일수도 있음
 
-			![43](/assets/img/2023-08-13-CS224n---Lecture-15-(.md/43.png)
+			![42](/assets/img/2023-08-13-CS224n---Lecture-15-(Add-Knowledge-to-Language-Models).md/42.png)
 
 - string match setting and revealing person name setting 없앰
 
@@ -749,7 +742,7 @@ Language Modeling)
 	→ because of query itself 
 
 
-	![44](/assets/img/2023-08-13-CS224n---Lecture-15-(.md/44.png)
+	![43](/assets/img/2023-08-13-CS224n---Lecture-15-(Add-Knowledge-to-Language-Models).md/43.png)
 
 
 	⇒ 구조가 상당히 다르기 때문에, 모델이 답변하기 힘들 수 있음
@@ -762,7 +755,7 @@ Language Modeling)
 	⇒ prompt의 변화가 엄청난 향상을 이끌 수 있다는 것 확인
 
 
-	![45](/assets/img/2023-08-13-CS224n---Lecture-15-(.md/45.png)
+	![44](/assets/img/2023-08-13-CS224n---Lecture-15-(Add-Knowledge-to-Language-Models).md/44.png)
 
 - prompts의 Ensemble 기법 이용
 
@@ -787,19 +780,19 @@ undefined- **Knowledge-driven downstream tasks**
 
 - **Relation extraction performance on TACRED (관계 추출 데이터셋)**
 
-	![46](/assets/img/2023-08-13-CS224n---Lecture-15-(.md/46.png)
+	![45](/assets/img/2023-08-13-CS224n---Lecture-15-(Add-Knowledge-to-Language-Models).md/45.png)
 
 - **Entity performance on Open Entity**
 	- 6,000개의 문장
 	- 각 문장에는 세밀한 entity type이 주석으로 표시
 
-	![47](/assets/img/2023-08-13-CS224n---Lecture-15-(.md/47.png)
+	![46](/assets/img/2023-08-13-CS224n---Lecture-15-(Add-Knowledge-to-Language-Models).md/46.png)
 
 undefined- **Summary**
 
-	![48](/assets/img/2023-08-13-CS224n---Lecture-15-(.md/48.png)
+	![47](/assets/img/2023-08-13-CS224n---Lecture-15-(Add-Knowledge-to-Language-Models).md/47.png)
 
 - **Other exciting progress & what’s next?**
 
-	![49](/assets/img/2023-08-13-CS224n---Lecture-15-(.md/49.png)
+	![48](/assets/img/2023-08-13-CS224n---Lecture-15-(Add-Knowledge-to-Language-Models).md/48.png)
 
