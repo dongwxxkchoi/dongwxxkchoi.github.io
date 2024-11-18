@@ -79,8 +79,16 @@ const n2m = new NotionToMarkdown({ notionClient: notion });
     pages.push(...response.results);
   }
 
+  const processedFiles = new Set();
   for (const r of pages) {
     const id = r.id;
+
+    const shouldUpdate = r.properties?.["업데이트필요"]?.["checkbox"] === true;
+    if (!shouldUpdate) {
+      console.log(`Skipping ${id} because "업데이트필요" is not checked.`);
+      continue;
+    }
+
     // date
     let date = moment(r.created_time).format("YYYY-MM-DD");
     let pdate = r.properties?.["날짜"]?.["date"]?.["start"];
@@ -150,6 +158,9 @@ author_profile: false${fmtags}${fmcats}
     const ftitle = `${date}-${title.replaceAll(" ", "-")}.md`;
     const filePath = path.join(root, ftitle);
 
+    processedFiles.add(ftitle);
+
+    
     
     let index = 0;
     let edited_md = md.replace(
@@ -182,16 +193,26 @@ author_profile: false${fmtags}${fmcats}
       }
     );
 
-    //writing to file
-    // fs.writeFile(path.join(root, ftitle), fm + edited_md, (err) => {
-    //   if (err) {
-    //     console.log(err);
-    //   }
-    // });
+    let newContent = fm + md;
+    if (fs.existsSync(filePath)) {
+      const currentContent = fs.readFileSync(filePath, "utf-8");
+      if (currentContent === newContent) {
+        console.log(`No changes for ${ftitle}. Skipping update.`);
+        continue;
+      }
+    }
+
     fs.writeFile(path.join(root, ftitle), fm + edited_md, (err) => {
       if (err) {
         console.log(err);
       }
     });
   }
+
+  const existingFiles = fs.readdirSync(root);
+  existingFiles.forEach((file) => {
+    if (!processedFiles.has(file)) {
+      console.log(`Keeping unprocessed file: ${file}`);
+    }
+  });
 })();
