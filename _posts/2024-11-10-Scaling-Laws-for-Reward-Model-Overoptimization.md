@@ -421,7 +421,7 @@ proxy reward $\hat X$ = gold reward $X$ + independent noise $Z$ 로 나타낼 �
 (a) Z도 gaussian distribution을 따름
 
 
-(b) $Z$는 평균 $\mathbb{E}|Z|$에서 $\delta$ 이내로 제한됨 ($\lVert Z-\mathbb{E}\lVert Z\rVert\rVert<\delta,\delta>0$)
+(b) $Z$는 평균 $\mathbb{E}|Z|$에서 $\delta$ 이내로 제한됨
 
 
 이 때, model은 Gold reward를 아래와 같이 예측합니다.
