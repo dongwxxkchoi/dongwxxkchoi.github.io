@@ -160,7 +160,7 @@ RM score는 translation-invariant property을 갖기 때문에, 실험 후 비�
 (아래 정리에 쓰이는 용어들은 설명을 위해 제가 임의로 정의했습니다.) 
 
 
-1) **Gold RM**은 **Gold standard의 역할을 하는 Reward Model**로 human preference data($\mathcal{D}_\text{g}=\{(x^{(i)},y^{(i)}_w,y^{(i)}_l\}_{i=1}^{32K}$)를 통해 직접 학습됩니다. 논문에선 **6B 크기의 GPT-3 model**을 사용했습니다. 이 Gold RM은 100K의 synthetic dataset 구축에 사용되어, 마찬가지로 gold RM preference dataset($\mathcal{D}_\text{g}=\{(x^{(i)},y^{(i)}_w,y^{(i)}_l\}_{i=1}^{100K}$)을 구축합니다.
+1) **Gold RM**은 **Gold standard의 역할을 하는 Reward Model**로 human preference data($D_g=\{(x^{(i)},y^{(i)}_w,y^{(i)}_l\}_{i=1}^{32K}$)를 통해 직접 학습됩니다. 논문에선 **6B 크기의 GPT-3 model**을 사용했습니다. 이 Gold RM은 100K의 synthetic dataset 구축에 사용되어, 마찬가지로 gold RM preference dataset($D_h=\{(x^{(i)},y^{(i)}_w,y^{(i)}_l\}_{i=1}^{100K}$)을 구축합니다.
 
 
 2) **Proxy RM**은 $\mathcal{D}_g$를 이용해 human preference를 학습합니다. **3M to 3B의 다양한 크기의 GPT-3 model**을 사용하며, $\mathcal{D}_g$의 약 10% 가량은 validation set을 위해 남깁니다. 
