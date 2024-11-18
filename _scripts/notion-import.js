@@ -11,12 +11,6 @@ const notion = new Client({
   auth: process.env.NOTION_TOKEN,
 });
 
-const crypto = require("crypto");
-
-function generateHash(content) {
-  return crypto.createHash("md5").update(content).digest("hex");
-}
-
 function escapeCodeBlock(body) {
   const regex = /```([\s\S]*?)```/g;
   return body.replace(regex, function (match, htmlBlock) {
@@ -187,26 +181,16 @@ author_profile: false${fmtags}${fmcats}
         return `![${index++}](/${filename})${res}`;
       }
     );
-    
-    const newContent = fm + edited_md;
-    if (fs.existsSync(filePath)) {
-      const currentContent = fs.readFileSync(filePath, "utf-8");
-      if (generateHash(currentContent) === generateHash(newContent)) {
-        console.log(`No changes detected for ${ftitle}, skipping.`);
-        continue;  // 파일 내용이 동일하면 건너뜀
-      }
-    }
+
     //writing to file
     // fs.writeFile(path.join(root, ftitle), fm + edited_md, (err) => {
     //   if (err) {
     //     console.log(err);
     //   }
     // });
-    fs.writeFile(filePath, newContent, (err) => {
+    fs.writeFile(path.join(root, ftitle), fm + edited_md, (err) => {
       if (err) {
         console.log(err);
-      } else {
-        console.log(`Updated ${ftitle}`);
       }
     });
   }
