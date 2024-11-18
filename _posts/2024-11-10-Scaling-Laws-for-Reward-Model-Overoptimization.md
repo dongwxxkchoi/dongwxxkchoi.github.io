@@ -53,7 +53,7 @@ categories: [AI, ]
 overoptimization 연구에 드는 human preference labels의 cost를 해결하기 위해, **synthetic setup**을 사용합니다. Human preference labels로 train된 gold-standard RM이 제공하는 label을 사용하는 방법입니다.
 
 
-논문의 주요 결과는 **empirical한 방법으로 검증**하여, **KL divergence(**$D_\text{KL}(\pi ||\pi_\text{init}$**))에 따른 reward model scores** $R$**의 변화**를 **functional form**으로 나타내었습니다. $D_\text{KL}(\pi ||\pi_\text{init}$)은 RL training 중 단조 증가하고, n의 function으로 계산될 수 있습니다. Anthropic의 논문[1]에 따라, $d:=\sqrt{D_\text{KL}(\pi||\pi_\text{init})}$**을 정의해** $d$**에 대해 functional form을 정리**합니다.
+논문의 주요 결과는 **empirical한 방법으로 검증**하여, **KL divergence(**$D_\text{KL}(\pi \|\pi_\text{init}$**))에 따른 reward model scores** $R$**의 변화**를 **functional form**으로 나타내었습니다. $D_\text{KL}(\pi\|\pi_\text{init}$)은 RL training 중 단조 증가하고, n의 function으로 계산될 수 있습니다. Anthropic의 논문[1]에 따라, $d:=\sqrt{D_\text{KL}(\pi\|\pi_\text{init})}$**을 정의해** $d$**에 대해 functional form을 정리**합니다.
 
 
 ![0](/assets/img/2024-11-10-Scaling-Laws-for-Reward-Model-Overoptimization.md/0.png)
@@ -160,7 +160,7 @@ RM score는 translation-invariant property을 갖기 때문에, 실험 후 비�
 (아래 정리에 쓰이는 용어들은 설명을 위해 제가 임의로 정의했습니다.) 
 
 
-1) **Gold RM**은 **Gold standard의 역할을 하는 Reward Model**로 human preference data($\mathcal{D}_\text{h}=\{(x_i,y_{il},y_{iw})|i=1,2,...,32\text k\}$)를 통해 직접 학습됩니다. 논문에선 **6B 크기의 GPT-3 model**을 사용했습니다. 이 Gold RM은 100K의 synthetic dataset 구축에 사용되어, 마찬가지로 gold RM preference dataset($\mathcal{D}_\text{g}=\{(x_i,y_{il},y_{iw})|i=1,2,...,100\text k$)을 구축합니다.
+1) **Gold RM**은 **Gold standard의 역할을 하는 Reward Model**로 human preference data($\mathcal{D}_\text{g}=\{(x^{(i)},y^{(i)}_w,y^{(i)}_l\}_{i=1}^{32K}$)를 통해 직접 학습됩니다. 논문에선 **6B 크기의 GPT-3 model**을 사용했습니다. 이 Gold RM은 100K의 synthetic dataset 구축에 사용되어, 마찬가지로 gold RM preference dataset($\mathcal{D}_\text{g}=\{(x^{(i)},y^{(i)}_w,y^{(i)}_l\}_{i=1}^{100K}$)을 구축합니다.
 
 
 2) **Proxy RM**은 $\mathcal{D}_g$를 이용해 human preference를 학습합니다. **3M to 3B의 다양한 크기의 GPT-3 model**을 사용하며, $\mathcal{D}_g$의 약 10% 가량은 validation set을 위해 남깁니다. 
@@ -169,7 +169,7 @@ RM score는 translation-invariant property을 갖기 때문에, 실험 후 비�
 3) **Policy**는 **Proxy RM을 통해 직접적으로 학습되는 LLM**을 의미합니다. **1.2B, 6B의 GPT-3 model을 사용**하는 것으로 나와있고, optimization 방식으론 RL(PPO), BoN(unbiased estimator) 방법을 사용합니다. 
 
 
-Anthropic 논문[1]에서 사용한 square root of KL divergence $\sqrt{D_\text{KL}(\pi||\pi_\text{init})}$을 일종의 optimization ratio로서 사용합니다. 이를 KL budget이라고도 표현하는데, KL budget에 따른 RM score의 변화 등을 살펴보고 이를 위에서 언급한 functional form으로 나타냅니다.
+Anthropic 논문[1]에서 사용한 square root of KL divergence $\sqrt{D_\text{KL}(\pi\|\pi_\text{init})}$을 일종의 optimization ratio로서 사용합니다. 이를 KL budget이라고도 표현하는데, KL budget에 따른 RM score의 변화 등을 살펴보고 이를 위에서 언급한 functional form으로 나타냅니다.
 
 
 ![3](/assets/img/2024-11-10-Scaling-Laws-for-Reward-Model-Overoptimization.md/3.png)
@@ -319,12 +319,6 @@ $\sqrt{KL}$에 따른 RM Score의 변화를 두 Policy에 대해 살펴보았습
 
 policy optimization 방법을 비교합니다.
 
-	- policy training 방법
-		- RL → PPO
-		- best-on-n
-
-	→ 다른 optimization 방법이 다른 overoptimization?
-
 
 **RL이 BoN**에 비해 **less KL-efficient** 합니다. optimization, overoptimization 모두 RL에서 KL이 더 커졌을때 나타납니다. 직관적으로 BoN은 초기 정책 주변에서 매우 국소적으로 탐색하고, KL은 $\log(n)$에 비례해 증가합니다. 반면, RL은 이전 정책을 매 step 수정해 사용하고, KL penalty가 없는 경우 RL은 2차 함수[Figure 16]에 가깝게 증가합니다.
 
@@ -367,7 +361,7 @@ KL Penalty가 미치는 영향을 $D_\text{KL}$과 gold RM score의 관계를 �
 두가지 결과와 위 그래프로 미뤄보았을 때, **KL penalty는 단지 early stopping의 효과**만 제공한다고 할 수 있습니다.
 
 
-하지만, 저자는 이 결과가 **PPO의 surrogate objective의 영향일 수도 있다**고 하비다. PPO는 학습의 안정성을 위해 $D_\text{KL}(\pi_\text{old}||\pi)$**을 사용**하는데, 이 term이 $D_\text{KL}(\pi||\pi_\text{init})$에도 **간접적 영향**을 미쳐 더 느리게 증가한다고 합니다. 하지만, 저자들도 왜 이런 효과가 나타나는지는 모른다고 하네요.
+하지만, 저자는 이 결과가 **PPO의 surrogate objective의 영향일 수도 있다**고 합니다. PPO는 학습의 안정성을 위해 $D_\text{KL}(\pi_\text{old}\|\pi)$**을 사용**하는데, 이 term이 $D_\text{KL}(\pi\|\pi_\text{init})$에도 **간접적 영향**을 미쳐 더 느리게 증가한다고 합니다. 하지만, 저자들도 왜 이런 효과가 나타나는지는 모른다고 하네요.
 
 
 ---
@@ -427,7 +421,7 @@ proxy reward $\hat X$ = gold reward $X$ + independent noise $Z$ 로 나타낼 �
 (a) Z도 gaussian distribution을 따름
 
 
-(b) $Z$는 평균 $\mathbb{E}|Z|$에서 $\delta$ 이내로 제한됨 ($|Z-\mathbb{E}|Z||<\delta,\delta>0$)
+(b) $Z$는 평균 $\mathbb{E}|Z|$에서 $\delta$ 이내로 제한됨 ($\lVert Z-\mathbb{E}\lVert Z\rVert\rVert<\delta,\delta>0$)
 
 
 이 때, model은 Gold reward를 아래와 같이 예측합니다.
