@@ -31,13 +31,17 @@ _(To be updated)_
 #### [**Embodied Agents Meet Personalization: Exploring Memory Utilization for Personalized Assistance**](https://arxiv.org/abs/2505.16348)  
 <span style="font-size: 0.83em;">
 Taeyoon Kwon<sup>‡</sup>, <strong>Dongwook Choi</strong><sup>‡</sup>, Sunghwan Kim, Hyojun Kim, Seungjun Moon, Beong-woo Kwak, Kuan-Hao Huang, Jinyoung Yeo  
+</span>
 
+<span style="font-size: 0.83em;">
 <em>Under Review at NeurIPS 2025</em>
 </span>
 
 #### [**Web-Shepherd: Advancing PRMs for Reinforcing Web Agents**](https://arxiv.org/abs/2505.15277)  
 <span style="font-size: 0.83em;">
 Hyungjoo Chae<sup>‡</sup>, Sunghwan Kim<sup>‡</sup>, Junhee Cho<sup>‡</sup>, Seungone Kim, Seungjun Moon, Gyeom Hwangbo, Dongha Lim, Minjin Kim, Yeonjun Hwang, Minju Gwak, <strong>Dongwook Choi</strong>, Minseok Kang, Gwanhoon Im, ByeongUng Cho, Hyojun Kim, Jun Hee Han, Taeyoon Kwon, Minju Kim, Beong-woo Kwak, Dongjin Kang, Jinyoung Yeo  
+</span>
 
+<span style="font-size: 0.83em;">
 <em>Under Review at NeurIPS 2025</em>
 </span>
