@@ -22,14 +22,14 @@ _(To be updated)_
 
 ## Publications
 
-<sup>‡</sup> indicates equal contribution.
+<h5><sup>‡</sup> indicates equal contribution.</h5>
 
 ### Under-review/Preprints
 
 #### [**Embodied Agents Meet Personalization: Exploring Memory Utilization for Personalized Assistance**](https://arxiv.org/abs/2505.16348)  
-##### Taeyoon Kwon<sup>‡</sup>, **Dongwook Choi**<sup>‡</sup>, Sunghwan Kim, Hyojun Kim, Seungjun Moon, Beong-woo Kwak, Kuan-Hao Huang, Jinyoung Yeo  
-##### <em>Under Review at NeurIPS 2025</em>
+<h5>Taeyoon Kwon<sup>‡</sup>, **Dongwook Choi**<sup>‡</sup>, Sunghwan Kim, Hyojun Kim, Seungjun Moon, Beong-woo Kwak, Kuan-Hao Huang, Jinyoung Yeo</h5>
+<h5><em>Under Review at NeurIPS 2025</em></h5>
 
 #### [**Web-Shepherd: Advancing PRMs for Reinforcing Web Agents**](https://arxiv.org/abs/2505.15277)  
-##### Hyungjoo Chae<sup>‡</sup>, Sunghwan Kim<sup>‡</sup>, Junhee Cho<sup>‡</sup>, Seungone Kim, Seungjun Moon, Gyeom Hwangbo, Dongha Lim, Minjin Kim, Yeonjun Hwang, Minju Gwak, **Dongwook Choi**, Minseok Kang, Gwanhoon Im, ByeongUng Cho, Hyojun Kim, Jun Hee Han, Taeyoon Kwon, Minju Kim, Beong-woo Kwak, Dongjin Kang, Jinyoung Yeo  
-##### <em>Under Review at NeurIPS 2025</em>
+<h5>Hyungjoo Chae<sup>‡</sup>, Sunghwan Kim<sup>‡</sup>, Junhee Cho<sup>‡</sup>, Seungone Kim, Seungjun Moon, Gyeom Hwangbo, Dongha Lim, Minjin Kim, Yeonjun Hwang, Minju Gwak, **Dongwook Choi**, Minseok Kang, Gwanhoon Im, ByeongUng Cho, Hyojun Kim, Jun Hee Han, Taeyoon Kwon, Minju Kim, Beong-woo Kwak, Dongjin Kang, Jinyoung Yeo</h5>
+<h5><em>Under Review at NeurIPS 2025</em></h5>
