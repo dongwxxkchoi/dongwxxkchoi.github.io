@@ -29,8 +29,7 @@ _(To be updated)_
 
 #### [**Embodied Agents Meet Personalization: Exploring Memory Utilization for Personalized Assistance**](https://arxiv.org/abs/2505.16348)  
 <span style="font-size: 0.83em;">
-Taeyoon Kwon<sup>‡</sup>, <strong>Dongwook Choi</strong><sup>‡</sup>, Sunghwan Kim, Hyojun Kim,  
-Seungjun Moon, Beong-woo Kwak, Kuan-Hao Huang, Jinyoung Yeo  
+Taeyoon Kwon<sup>‡</sup>, <strong>Dongwook Choi</strong><sup>‡</sup>, Sunghwan Kim, Hyojun Kim, Seungjun Moon, Beong-woo Kwak, Kuan-Hao Huang, Jinyoung Yeo  
 <em>Under Review at NeurIPS 2025</em>
 </span>
 
