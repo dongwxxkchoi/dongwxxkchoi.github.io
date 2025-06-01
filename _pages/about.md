@@ -20,14 +20,14 @@ Hi! I am a M.S. student at LangAGI Lab advised by Jinyoung Yeo. Previously, I re
 
 ## Publications
 
-‡ indicates equal contribution.
+<small>‡</small> indicates equal contribution.
 
 ### Under-review/Preprints
 
 **Web-Shepherd: Advancing PRMs for Reinforcing Web Agents**  
-Hyungjoo Chae‡, Sunghwan Kim‡, Junhee Cho, Seungone Kim, Seungjun Moon, Gyeom Hwangbo, Dongha Lim, Minjin Kim, Yeonjun Hwang, Minju Gwak, **Dongwook Choi**, Minseok Kang, Gwanhoon Im, ByeongUng Cho, Hyojun Kim, Jun Hee Han, Taeyoon Kwon, Minju Kim, Beong-woo Kwak, Dongjin Kang, Jinyoung Yeo  
+Hyungjoo Chae<small>‡</small>, Sunghwan Kim<small>‡</small>, Junhee Cho, Seungone Kim, Seungjun Moon, Gyeom Hwangbo, Dongha Lim, Minjin Kim, Yeonjun Hwang, Minju Gwak, **Dongwook Choi**, Minseok Kang, Gwanhoon Im, ByeongUng Cho, Hyojun Kim, Jun Hee Han, Taeyoon Kwon, Minju Kim, Beong-woo Kwak, Dongjin Kang, Jinyoung Yeo  
 Under Review at NeurIPS 2025
 
 **Embodied Agents Meet Personalization: Exploring Memory Utilization for Personalized Assistance**  
-Taeyoon Kwon‡ **Dongwook Choi‡** Sunghwan Kim Hyojun Kim Seungjun Moon Beong-woo Kwak Kuan-Hao Huang Jinyoung Yeo
+Taeyoon Kwon<small>‡</small>, **Dongwook Choi**<small>‡</small>, Sunghwan Kim, Hyojun Kim, Seungjun Moon, Beong-woo Kwak, Kuan-Hao Huang, Jinyoung Yeo  
 Under Review at NeurIPS 2025
