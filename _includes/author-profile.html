@@ -65,6 +65,9 @@
       {% if author.scopus %}
         <li><a href="{{ author.scopus }}"><i class="ai ai-scopus ai-fw icon-pad-right"></i>Scopus</a></li>
       {% endif %}
+      {% if author.cv %}
+        <li><a href="{{ author.cv }}"><i class="fas fa-fw fa-file-pdf icon-pad-right" aria-hidden="true"></i>CV</a></li>
+      {% endif %}
 
       <!-- Font Awesome icons / Repositories and software development -->
       {% if author.bitbucket %}
