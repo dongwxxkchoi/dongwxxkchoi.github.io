@@ -55,7 +55,7 @@ Kai Tzu-iunn Ong, Hyojun Kim, Iiseo Jihn, Jiwoo Kim, Junwon Seo, Jihoon Kim, Sun
 </span>
 
 <span style="font-size: 0.83em;">
-<em>Under Review at EMNLP 2025</em>
+<!-- <em>Under Review at EMNLP 2025</em> -->
 </span>
 
 ### 2025
