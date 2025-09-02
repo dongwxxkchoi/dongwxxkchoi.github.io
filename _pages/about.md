@@ -49,7 +49,7 @@ Hyungjoo Chae<sup>‡</sup>, Sunghwan Kim<sup>‡</sup>, Junhee Cho<sup>‡</sup
 <em>Under Review at NeurIPS 2025</em>
 </span>
 
-#### [**Rethinking Human-AI Collaboration: Are Clinicians and LLMs Good Partners for Clinical Co-reasoning?**]
+#### **Rethinking Human-AI Collaboration: Are Clinicians and LLMs Good Partners for Clinical Co-reasoning?**
 <span style="font-size: 0.83em;">
 Kai Tzu-iunn Ong, Hyojun Kim, Iiseo Jihn, Jiwoo Kim, Junwon Seo, Jihoon Kim, Sunghwan Kim, <strong>Dongwook Choi</strong>, Eun Young Choi, Jinyoung Yeo
 </span>
