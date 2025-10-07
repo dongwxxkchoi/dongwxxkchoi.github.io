@@ -31,32 +31,22 @@ _(To be updated)_
 
 ### Under-review/Preprints
 
-#### [**Embodied Agents Meet Personalization: Exploring Memory Utilization for Personalized Assistance**](https://arxiv.org/abs/2505.16348)  
+#### [**Embodied Agents Meet Personalization: Investigating Challenges and Solutions Through the Lens of Memory Utilization**]
 <span style="font-size: 0.83em;">
 Taeyoon Kwon<sup>‡</sup>, <strong>Dongwook Choi</strong><sup>‡</sup>, Sunghwan Kim, Hyojun Kim, Seungjun Moon, Beong-woo Kwak, Kuan-Hao Huang, Jinyoung Yeo  
 </span>
 
 <span style="font-size: 0.83em;">
-<em>Under Review at NeurIPS 2025</em>
+<em>Under Review at ICLR 2026</em>
 </span>
 
-#### [**Web-Shepherd: Advancing PRMs for Reinforcing Web Agents**](https://arxiv.org/abs/2505.15277)  
-<span style="font-size: 0.83em;">
-Hyungjoo Chae<sup>‡</sup>, Sunghwan Kim<sup>‡</sup>, Junhee Cho<sup>‡</sup>, Seungone Kim, Seungjun Moon, Gyeom Hwangbo, Dongha Lim, Minjin Kim, Yeonjun Hwang, Minju Gwak, <strong>Dongwook Choi</strong>, Minseok Kang, Gwanhoon Im, ByeongUng Cho, Hyojun Kim, Jun Hee Han, Taeyoon Kwon, Minju Kim, Beong-woo Kwak, Dongjin Kang, Jinyoung Yeo  
-</span>
-
-<span style="font-size: 0.83em;">
-<em>Under Review at NeurIPS 2025</em>
-</span>
-
-#### **Rethinking Human-AI Collaboration: Are Clinicians and LLMs Good Partners for Clinical Co-reasoning?**
+<!-- #### **Rethinking Human-AI Collaboration: Are Clinicians and LLMs Good Partners for Clinical Co-reasoning?**
 <span style="font-size: 0.83em;">
 Kai Tzu-iunn Ong, Hyojun Kim, Iiseo Jihn, Jiwoo Kim, Junwon Seo, Jihoon Kim, Sunghwan Kim, <strong>Dongwook Choi</strong>, Eun Young Choi, Jinyoung Yeo
 </span>
 
 <span style="font-size: 0.83em;">
-<!-- <em>Under Review at EMNLP 2025</em> -->
-</span>
+</span> -->
 
 ### 2025
 
@@ -67,4 +57,13 @@ Kai Tzu-iunn Ong, Hyojun Kim, Iiseo Jihn, Jiwoo Kim, Junwon Seo, Jihoon Kim, Sun
 
 <span style="font-size: 0.83em;">
 <em>XRMemory Workshop, IEEE ISMAR 2025</em>
+</span>
+
+#### [**Web-Shepherd: Advancing PRMs for Reinforcing Web Agents**](https://arxiv.org/abs/2505.15277)  
+<span style="font-size: 0.83em;">
+Hyungjoo Chae<sup>‡</sup>, Sunghwan Kim<sup>‡</sup>, Junhee Cho<sup>‡</sup>, Seungone Kim, Seungjun Moon, Gyeom Hwangbo, Dongha Lim, Minjin Kim, Yeonjun Hwang, Minju Gwak, <strong>Dongwook Choi</strong>, Minseok Kang, Gwanhoon Im, ByeongUng Cho, Hyojun Kim, Jun Hee Han, Taeyoon Kwon, Minju Kim, Beong-woo Kwak, Dongjin Kang, Jinyoung Yeo  
+</span>
+
+<span style="font-size: 0.83em;">
+<em>NeurIPS 2025 Spotlight</em>
 </span>
