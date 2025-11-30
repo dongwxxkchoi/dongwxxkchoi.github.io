@@ -34,20 +34,12 @@ _(To be updated)_
 
 #### [**Embodied Agents Meet Personalization: Investigating Challenges and Solutions Through the Lens of Memory Utilization**](https://arxiv.org/abs/2505.16348v2)
 <span style="font-size: 0.83em;">
-Taeyoon Kwon<sup>‡</sup>, <strong>Dongwook Choi</strong><sup>‡</sup>, Sunghwan Kim, Hyojun Kim, Seungjun Moon, Beong-woo Kwak, Kuan-Hao Huang, Jinyoung Yeo  
+Taeyoon Kwon<sup>‡</sup>, <strong>Dongwook Choi</strong><sup>‡</sup>, Hyojun Kim, Sunghwan Kim, Seungjun Moon, Beong-woo Kwak, Kuan-Hao Huang, Jinyoung Yeo  
 </span>
 
 <span style="font-size: 0.83em;">
 <em>Under Review at ICLR 2026</em>
 </span>
-
-<!-- #### **Rethinking Human-AI Collaboration: Are Clinicians and LLMs Good Partners for Clinical Co-reasoning?**
-<span style="font-size: 0.83em;">
-Kai Tzu-iunn Ong, Hyojun Kim, Iiseo Jihn, Jiwoo Kim, Junwon Seo, Jihoon Kim, Sunghwan Kim, <strong>Dongwook Choi</strong>, Eun Young Choi, Jinyoung Yeo
-</span>
-
-<span style="font-size: 0.83em;">
-</span> -->
 
 ### 2025
 
