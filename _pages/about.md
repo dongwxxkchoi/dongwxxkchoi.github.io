@@ -32,15 +32,6 @@ _(To be updated)_
 
 ### Under-review/Preprints
 
-#### [**Embodied Agents Meet Personalization: Investigating Challenges and Solutions Through the Lens of Memory Utilization**](https://arxiv.org/abs/2505.16348v2)
-<span style="font-size: 0.83em;">
-Taeyoon Kwon<sup>‡</sup>, <strong>Dongwook Choi</strong><sup>‡</sup>, Hyojun Kim, Sunghwan Kim, Seungjun Moon, Beong-woo Kwak, Kuan-Hao Huang, Jinyoung Yeo  
-</span>
-
-<span style="font-size: 0.83em;">
-<em>Under Review at ICLR 2026</em>
-</span>
-
 ### 2025
 
 #### [**Designing Memory-Augmented AR Agents for Spatiotemporal Reasoning in Personalized Task Assistance**](https://arxiv.org/abs/2508.08774)
@@ -59,4 +50,13 @@ Hyungjoo Chae<sup>‡</sup>, Sunghwan Kim<sup>‡</sup>, Junhee Cho<sup>‡</sup
 
 <span style="font-size: 0.83em;">
 <em>NeurIPS 2025 Spotlight</em>
+</span>
+
+#### [**Embodied Agents Meet Personalization: Investigating Challenges and Solutions Through the Lens of Memory Utilization**](https://arxiv.org/abs/2505.16348v2)
+<span style="font-size: 0.83em;">
+Taeyoon Kwon<sup>‡</sup>, <strong>Dongwook Choi</strong><sup>‡</sup>, Hyojun Kim, Sunghwan Kim, Seungjun Moon, Beong-woo Kwak, Kuan-Hao Huang, Jinyoung Yeo  
+</span>
+
+<span style="font-size: 0.83em;">
+<em>ICLR 2026</em>
 </span>
