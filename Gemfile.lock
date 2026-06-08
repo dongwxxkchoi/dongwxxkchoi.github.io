@@ -182,11 +182,11 @@ PLATFORMS
   x86_64-linux-musl
 
 DEPENDENCIES
-  base64 (~> 0.2)
-  csv (~> 3.3)
+  base64
+  csv
   jekyll (~> 4.3.4)
   jekyll-feed (~> 0.17)
-  logger (~> 1.6)
+  logger
   tzinfo (~> 1.2)
   tzinfo-data
   wdm (~> 0.1.1)

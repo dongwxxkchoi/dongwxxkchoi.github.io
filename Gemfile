@@ -6,6 +6,11 @@ source "https://rubygems.org"
 #     bundle exec jekyll serve
 gem "jekyll", "~> 4.3.4"
 
+# Jekyll still requires these libraries explicitly on newer Ruby versions.
+gem "base64"
+gem "csv"
+gem "logger"
+
 # Plugins
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.17"
