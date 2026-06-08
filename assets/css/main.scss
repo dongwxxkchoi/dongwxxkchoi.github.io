@@ -1,43 +1,19 @@
 ---
+# Only the main Sass file needs Front Matter
 ---
 
-/*
- * This file controls what is imported from /_sass
- *
- * Note that the files are processed in the order they are imported, so they are partly
-   sorted by the dependencies. Also, the first two lines of the file are required by Jekyll.
- */
+@charset "utf-8";
 
-@import
-    "vendor/breakpoint/breakpoint",
+@use "variables" with (
+  $base-url: "{{ site.baseurl }}"
+);
+@use "mixins";
+@use "extends";
 
-    "themes",
-    "theme/default",
-    "theme/dark",
-
-    "include/mixins",
-    "vendor/susy/susy",
-
-    "layout/reset",
-    "layout/base",
-
-    "include/utilities",
-    "layout/tables",
-    "layout/buttons",
-    "layout/notices",
-    "layout/masthead",
-    "layout/navigation",
-    "layout/footer",
-    "syntax",
-
-    "layout/forms",
-
-    "layout/page",
-    "layout/archive",
-    "layout/sidebar",
-
-    "vendor/font-awesome/fontawesome",
-    "vendor/font-awesome/solid",
-    "vendor/font-awesome/brands",
-    "vendor/magnific-popup/magnific-popup"
-;
+@use "base";
+@use "layout";
+@use "site";
+@use "work";
+@use "blog";
+@use "post";
+@use "not_found";
