@@ -1,13 +1,20 @@
 /**
  * Menu
  */
-$("a.menu-icon").on("click", function(event) {
-  var w = $(".menu");
+document.addEventListener("DOMContentLoaded", function() {
+  var menuIcon = document.querySelector("a.menu-icon");
+  var menu = document.querySelector(".site-nav .menu");
 
-  w.css({
-    display: (w.css("display") === "none")
-      ? "block"
-      : "none"
+  if (!menuIcon || !menu) {
+    return;
+  }
+
+  menuIcon.addEventListener("click", function(event) {
+    event.preventDefault();
+
+    var isOpen = menu.style.display === "block";
+    menu.style.display = isOpen ? "none" : "block";
+    menuIcon.setAttribute("aria-expanded", isOpen ? "false" : "true");
   });
 });
 
