@@ -545,16 +545,18 @@ a .chart-link:hover {
 .timeline {
   margin-top: 22px;
   position: relative;
+  --timeline-axis: 135px;
 }
 
 .timeline::before {
   background: linear-gradient(#d4d4d4, #eeeeee);
   bottom: 12px;
   content: "";
-  left: 151px;
+  left: var(--timeline-axis);
   position: absolute;
   top: 12px;
   width: 1px;
+  transform: translateX(-50%);
 }
 
 .timeline-item {
@@ -570,11 +572,12 @@ a .chart-link:hover {
   border: 2px solid #4f4f4f;
   border-radius: 50%;
   content: "";
-  height: 10px;
-  left: 146px;
+  height: 11px;
+  left: var(--timeline-axis);
   position: absolute;
   top: 20px;
-  width: 9px;
+  transform: translateX(-50%);
+  width: 11px;
   z-index: 1;
 }
 
@@ -583,9 +586,10 @@ a .chart-link:hover {
   border-radius: 50%;
   content: "";
   height: 4px;
-  left: 151px;
+  left: var(--timeline-axis);
   position: absolute;
   top: 25px;
+  transform: translateX(-50%);
   width: 4px;
   z-index: 2;
 }
@@ -692,6 +696,7 @@ a .chart-link:hover {
 @include mixins.media-query(variables.$on-mobile) {
   .timeline::before {
     left: 6px;
+    transform: none;
   }
 
   .timeline-item {
@@ -702,11 +707,13 @@ a .chart-link:hover {
   .timeline-item::before {
     left: -24px;
     top: 8px;
+    transform: none;
   }
 
   .timeline-item::after {
     left: -19px;
     top: 13px;
+    transform: none;
   }
 
   .timeline-date {
