@@ -545,7 +545,9 @@ a .chart-link:hover {
 .timeline {
   margin-top: 22px;
   position: relative;
-  --timeline-axis: 135px;
+  --timeline-date-width: 142px;
+  --timeline-gap: 28px;
+  --timeline-axis: calc(var(--timeline-date-width) + (var(--timeline-gap) / 2));
 }
 
 .timeline::before {
@@ -561,8 +563,8 @@ a .chart-link:hover {
 
 .timeline-item {
   display: grid;
-  gap: 26px;
-  grid-template-columns: 122px 1fr;
+  gap: var(--timeline-gap);
+  grid-template-columns: var(--timeline-date-width) 1fr;
   margin-bottom: 18px;
   position: relative;
 }
@@ -605,6 +607,7 @@ a .chart-link:hover {
   line-height: 1.35;
   padding: 7px 8px;
   text-align: center;
+  white-space: nowrap;
 }
 
 .timeline-content {
