@@ -220,11 +220,11 @@ My recent work studies **memory-augmented** and **safety-aware agent systems**, 
   </div>
 
   <div class="home-publication">
-    <div class="publication-title">Evaluating Scene-Description Alignment in Text-Guided 3D Scene Synthesis via Fine-Grained Constraint Verification</div>
+    <div class="publication-title"><a href="https://gyeomh.github.io/LEGO-Eval/">Apples on the Table? Evaluating Text-Guided 3D Scene Synthesis via Fine-Grained Constraint Verification</a></div>
     <div class="publication-authors">Minseok Kang&#42;, <strong>Dongwook Choi</strong>&#42;, Gyeom Hwangbo&#42;, Seungwon Lim, Kai Tzu-iunn Ong, Jinyoung Yeo</div>
     <div class="publication-links">
-      <span class="pub-badge preprint">Preprint</span>
-      <span class="pub-badge">EMNLP 2026 Under Review</span>
+      <a class="pub-badge link-badge" href="https://gyeomh.github.io/LEGO-Eval/">Project</a>
+      <span class="pub-badge venue">EMNLP 2026</span>
     </div>
   </div>
 
@@ -247,9 +247,10 @@ My recent work studies **memory-augmented** and **safety-aware agent systems**, 
   </div>
 
   <div class="home-publication">
-    <div class="publication-title"><a href="https://arxiv.org/abs/2505.16348v2">Embodied Agents Meet Personalization: Investigating Challenges and Solutions Through the Lens of Memory Utilization</a></div>
+    <div class="publication-title"><a href="https://connoriginal.github.io/MEMENTO/">Embodied Agents Meet Personalization: Investigating Challenges and Solutions Through the Lens of Memory Utilization</a></div>
     <div class="publication-authors">Taeyoon Kwon&#42;, <strong>Dongwook Choi</strong>&#42;, Hyojun Kim, Sunghwan Kim, Seungjun Moon, Beong-woo Kwak, Kuan-Hao Huang, Jinyoung Yeo</div>
     <div class="publication-links">
+      <a class="pub-badge link-badge" href="https://connoriginal.github.io/MEMENTO/">Project</a>
       <a class="pub-badge link-badge" href="https://arxiv.org/abs/2505.16348v2">arXiv</a>
       <span class="pub-badge venue">ICLR 2026</span>
     </div>
