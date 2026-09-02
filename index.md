@@ -233,9 +233,10 @@ My recent work studies **memory-augmented** and **safety-aware agent systems**, 
   </div>
 
   <div class="home-publication">
-    <div class="publication-title"><a href="https://arxiv.org/abs/2605.30924">EMBGuard: Constructing Hazard-Aware Guardrails for Safe Planning in Embodied Agents</a></div>
+    <div class="publication-title"><a href="/embguard/">EMBGuard: Constructing Hazard-Aware Guardrails for Safe Planning in Embodied Agents</a></div>
     <div class="publication-authors"><strong>Dongwook Choi</strong>&#42;, Taeyoon Kwon&#42;, Bogyung Jeong, Minju Kim, Yeonjun Hwang, Hyojun Kim, Byungchul Kim, Young Kyun Jang, Jinyoung Yeo</div>
     <div class="publication-links">
+      <a class="pub-badge link-badge" href="/embguard/">Project</a>
       <a class="pub-badge link-badge" href="https://arxiv.org/abs/2605.30924">arXiv</a>
       <span class="pub-badge venue">ICML 2026</span>
     </div>
