@@ -22,6 +22,10 @@ My recent work studies **memory-augmented** and **safety-aware agent systems**, 
 
 <div class="news-list">
   <div class="news-item">
+    <span class="news-date">Sep. 2026</span>
+    <span class="news-text">🎉 <strong>Apples on the Table?</strong> was accepted to <strong>EMNLP 2026</strong>.</span>
+  </div>
+  <div class="news-item">
     <span class="news-date">Jun. 2026</span>
     <span class="news-text">🎉 <strong>EMBGuard</strong> was accepted to <strong>ICML 2026</strong>.</span>
   </div>
