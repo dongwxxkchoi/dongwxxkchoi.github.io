@@ -23,14 +23,18 @@ My recent work studies **memory-augmented** and **safety-aware agent systems**, 
 <div class="news-list">
   <div class="news-item">
     <span class="news-date">Sep. 2026</span>
+    <span class="news-text">🎉 <strong>SHOR</strong> was accepted to <strong>NeurIPS 2026</strong>.</span>
+  </div>
+  <div class="news-item">
+    <span class="news-date">Aug. 2026</span>
     <span class="news-text">🎉 <strong>Apples on the Table?</strong> was accepted to <strong>EMNLP 2026</strong>.</span>
   </div>
   <div class="news-item">
-    <span class="news-date">Jun. 2026</span>
+    <span class="news-date">Apr. 2026</span>
     <span class="news-text">🎉 <strong>EMBGuard</strong> was accepted to <strong>ICML 2026</strong>.</span>
   </div>
   <div class="news-item">
-    <span class="news-date">May 2026</span>
+    <span class="news-date">Apr. 2026</span>
     <span class="news-text">🎉 <strong>PAC-Bench</strong> was accepted to <strong>ACL 2026 Findings</strong>.</span>
   </div>
   <div class="news-item">
@@ -219,7 +223,7 @@ My recent work studies **memory-augmented** and **safety-aware agent systems**, 
     <div class="publication-authors">Kai Tzu-iunn Ong&#42;, Minseok Kang&#42;, <strong>Dongwook Choi</strong>&#42;, Junhee Cho, Seungju Kim, Seungwon Lim, Geunha Jang, Minwoo Oh, Bogyung Jeong, Sunghwan Kim, Taeyoon Kwon, Jinyoung Yeo</div>
     <div class="publication-links">
       <a class="pub-badge link-badge" href="https://arxiv.org/abs/2605.22505">arXiv</a>
-      <span class="pub-badge">NeurIPS 2026 Under Review</span>
+      <span class="pub-badge venue">NeurIPS 2026</span>
     </div>
   </div>
 

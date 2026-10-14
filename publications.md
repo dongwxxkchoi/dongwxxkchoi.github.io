@@ -39,32 +39,32 @@ permalink: /publications/
     <div class="venue-bars">
       <a class="venue-row" href="#paper-embguard">
         <span>ICML</span>
-        <div class="bar-track"><div class="venue-bar icml" style="width: 100%;"></div></div>
+        <div class="bar-track"><div class="venue-bar icml" style="width: 50%;"></div></div>
         <strong>1</strong>
       </a>
       <a class="venue-row" href="#paper-pac-bench">
         <span>ACL</span>
-        <div class="bar-track"><div class="venue-bar acl" style="width: 100%;"></div></div>
+        <div class="bar-track"><div class="venue-bar acl" style="width: 50%;"></div></div>
         <strong>1</strong>
       </a>
       <a class="venue-row" href="#paper-personalization">
         <span>ICLR</span>
-        <div class="bar-track"><div class="venue-bar iclr" style="width: 100%;"></div></div>
+        <div class="bar-track"><div class="venue-bar iclr" style="width: 50%;"></div></div>
         <strong>1</strong>
       </a>
       <a class="venue-row" href="#paper-scene-alignment">
         <span>EMNLP</span>
-        <div class="bar-track"><div class="venue-bar emnlp" style="width: 100%;"></div></div>
+        <div class="bar-track"><div class="venue-bar emnlp" style="width: 50%;"></div></div>
         <strong>1</strong>
       </a>
       <a class="venue-row" href="#paper-web-shepherd">
         <span>NeurIPS</span>
         <div class="bar-track"><div class="venue-bar neurips" style="width: 100%;"></div></div>
-        <strong>1</strong>
+        <strong>2</strong>
       </a>
       <a class="venue-row" href="#paper-ar-memory">
         <span>ISMAR W.</span>
-        <div class="bar-track"><div class="venue-bar workshop" style="width: 100%;"></div></div>
+        <div class="bar-track"><div class="venue-bar workshop" style="width: 50%;"></div></div>
         <strong>1</strong>
       </a>
     </div>
@@ -78,10 +78,10 @@ permalink: /publications/
   <li class="publication-entry" id="paper-harness-optimizers">
     <div class="publication-title"><a href="https://arxiv.org/abs/2605.22505">Towards Direct Evaluation of Harness Optimizers via Priority Ranking</a></div>
     <div class="publication-authors">Kai Tzu-iunn Ong&#42;, Minseok Kang&#42;, <strong>Dongwook Choi</strong>&#42;, Junhee Cho, Seungju Kim, Seungwon Lim, Geunha Jang, Minwoo Oh, Bogyung Jeong, Sunghwan Kim, Taeyoon Kwon, Jinyoung Yeo</div>
-    <div class="publication-venue">Under review at NeurIPS 2026</div>
+    <div class="publication-venue">NeurIPS 2026</div>
     <div class="publication-links">
       <a class="pub-badge link-badge" href="https://arxiv.org/abs/2605.22505">arXiv</a>
-      <span class="pub-badge">NeurIPS 2026 Under Review</span>
+      <span class="pub-badge venue">NeurIPS 2026</span>
     </div>
   </li>
 
