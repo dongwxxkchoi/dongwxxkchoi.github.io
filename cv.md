@@ -13,4 +13,4 @@ The latest CV is available as a PDF.
   <a href="/files/Dongwook_s_CV.pdf">Open CV PDF</a>
 </p>
 
-Last updated: 2026-06-02.
+Last updated: 2026-11-22.

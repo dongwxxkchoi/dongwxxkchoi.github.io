@@ -5,11 +5,11 @@ profile_picture:
   alt: Dongwook Choi
 ---
 
-I am an **M.S. student in Artificial Intelligence at Yonsei University**, advised by **Prof. Jinyoung Yeo**. My research interests are **AI agents**, **AI safety**, and **embodied agents**.
+I am an **M.S. student in Artificial Intelligence at Yonsei University**, advised by **Prof. Jinyoung Yeo**. My research interests are **embodied agents** and **safe, reliable agents**.
 
 Previously, I received a **B.S. in Software Engineering from Chung-Ang University**, graduating **Magna Cum Laude**. Before starting my M.S., I worked as an undergraduate research intern at the **Language & AGI Lab at Yonsei University**.
 
-My recent work studies **memory-augmented** and **safety-aware agent systems**, including embodied agents, AR agents, web agents, and multi-agent collaboration under constraints.
+My recent work studies **embodied agents** and **safe, reliable agents**, with a focus on **planning in 3D environments**, **memory and personalization for human assistance**, **risk-aware decision making**, **trustworthy human-agent interaction**, and **agent evaluation**.
 
 <div class="intro-actions">
   <a class="cv-button" href="/files/Dongwook_s_CV.pdf">
@@ -66,16 +66,16 @@ My recent work studies **memory-augmented** and **safety-aware agent systems**, 
   </div>
 
   <div class="timeline-item">
-    <div class="timeline-date">Dec. 2024 - Aug. 2025</div>
+    <div class="timeline-date">Dec. 2024 - Present</div>
     <div class="timeline-content">
       <div class="timeline-logo">
         <img src="https://www.yonsei.ac.kr/sites/en_sc/images/sub/img-symbol1.png" alt="Yonsei University logo">
       </div>
       <div class="timeline-body">
         <div class="timeline-kicker">🔬 Research</div>
-        <h3>Undergraduate Research Intern</h3>
+        <h3>M.S. Student Researcher</h3>
         <p class="timeline-org">Language &amp; AGI Lab, Yonsei University <span>@ Seoul, Republic of Korea</span></p>
-        <p>Co-led research on <strong>memory-augmented embodied agents</strong> for personalized assistance and led research on <strong>AR agent systems</strong>.</p>
+        <p>Previously a research intern (Dec. 2024 - Aug. 2025). Research spans <strong>safe embodied planning</strong>, <strong>memory and personalization</strong>, <strong>3D scene evaluation</strong>, and <strong>agent evaluation</strong>.</p>
       </div>
     </div>
   </div>

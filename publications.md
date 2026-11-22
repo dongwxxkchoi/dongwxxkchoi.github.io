@@ -30,7 +30,7 @@ permalink: /publications/
       <a href="#pub-year-2025"><circle cx="46" cy="138" r="6" class="chart-point chart-link" /></a>
       <a href="#pub-year-2026"><circle cx="340" cy="43" r="6" class="chart-point chart-link" /></a>
     </svg>
-    <p class="chart-total">Total: 7 publications & preprints</p>
+    <p class="chart-total">Total: 7 publications</p>
   </section>
 
   <section class="status-panel">
@@ -152,3 +152,13 @@ permalink: /publications/
     </div>
   </li>
 </ol>
+
+## Patent
+
+<div class="publication-list">
+  <div class="publication-entry" id="patent-ar-memory">
+    <div class="publication-title">Apparatus and Method for Spatiotemporal Reasoning with User Experience Memory Augmentation for Personalized Task Support</div>
+    <div class="publication-authors"><strong>Dongwook Choi</strong>, Jinyoung Yeo, Minjun Park, Juhyun Park, Donghyun Kim</div>
+    <div class="publication-venue">Korean Patent Application No. 10-2026-0034154, filed Feb. 2026 (pending)</div>
+  </div>
+</div>
