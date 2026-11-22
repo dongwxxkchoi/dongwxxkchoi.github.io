@@ -5,14 +5,16 @@ profile_picture:
   alt: Dongwook Choi
 ---
 
-I am an **M.S. student in Artificial Intelligence at Yonsei University**, advised by **Prof. Jinyoung Yeo**. My research interests are **embodied agents** and **safe, reliable agents**.
+I am an **M.S. student in Artificial Intelligence at Yonsei University**, advised by **Prof. Jinyoung Yeo**.
 
 Previously, I received a **B.S. in Software Engineering from Chung-Ang University**, graduating **Magna Cum Laude**. Before starting my M.S., I worked as an undergraduate research intern at the **Language & AGI Lab at Yonsei University**.
 
-My recent work studies **embodied agents** and **safe, reliable agents**, with a focus on **planning in 3D environments**, **memory and personalization for human assistance**, **risk-aware decision making**, **trustworthy human-agent interaction**, and **agent evaluation**.
+My research focuses on building **human-centered AI agents**, particularly **embodied agents** that interact with and assist people in complex environments.
+
+I pursue this vision along two complementary directions: (1) enabling **context-aware and personalized assistance** through planning and memory, and (2) developing **safe and trustworthy agents** through research on autonomous-agent safety and human-agent interaction. Across both directions, I explore agent training, evaluation, and benchmarking to improve and rigorously assess their capabilities and reliability.
 
 <div class="intro-actions">
-  <a class="cv-button" href="/files/Dongwook_s_CV.pdf">
+  <a class="cv-button" href="/files/Dongwook_s_CV.pdf?v=20261122-2">
     <span class="cv-button-icon" aria-hidden="true">↓</span>
     <span>CV PDF</span>
   </a>

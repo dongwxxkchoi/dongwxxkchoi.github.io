@@ -2,7 +2,7 @@
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 
 title: Dongwook Choi
-description: M.S. student in Artificial Intelligence at Yonsei University, researching embodied agents and safe, reliable agents.
+description: M.S. student in Artificial Intelligence at Yonsei University, researching human-centered embodied agents and safe, trustworthy AI agents.
 baseurl: ""
 url: "https://dongwxxkchoi.github.io"
 og_image: /assets/img/profile-main.jpeg

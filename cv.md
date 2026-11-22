@@ -10,7 +10,7 @@ permalink: /cv/
 The latest CV is available as a PDF.
 
 <p class="quick-links">
-  <a href="/files/Dongwook_s_CV.pdf">Open CV PDF</a>
+  <a href="/files/Dongwook_s_CV.pdf?v=20261122-2">Open CV PDF</a>
 </p>
 
 Last updated: 2026-11-22.
